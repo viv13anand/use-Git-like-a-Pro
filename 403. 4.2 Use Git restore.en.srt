@@ -1,0 +1,386 @@
+1
+00:00:06,730 --> 00:00:11,779
+Git restore command is used to restore a
+file to its previously committed state.
+
+2
+00:00:12,310 --> 00:00:14,560
+You can use git restore and the file name.
+
+3
+00:00:15,259 --> 00:00:18,640
+It is very similar to what we
+did with the git checkout command.
+
+4
+00:00:18,899 --> 00:00:21,089
+So we were running git
+checkout, file name,
+
+5
+00:00:21,089 --> 00:00:23,550
+and it would restore it
+to its previous version.
+
+6
+00:00:24,269 --> 00:00:29,629
+But instead of git checkout, you can also
+use git restore command to do the same.
+
+7
+00:00:30,989 --> 00:00:36,740
+Just make sure whenever you run git
+restore command for restoring your file changes,
+
+8
+00:00:36,740 --> 00:00:39,200
+the changes will be permanently lost.
+
+9
+00:00:40,840 --> 00:00:43,450
+And this also happens
+with the checkout command.
+
+10
+00:00:43,789 --> 00:00:45,950
+You will lose the
+changes if you restore it.
+
+11
+00:00:47,450 --> 00:00:50,670
+We can also restore a file
+to any commit in the log.
+
+12
+00:00:51,409 --> 00:00:54,100
+We need to tell number of
+commits we need to go back to.
+
+13
+00:00:54,719 --> 00:00:58,359
+So you can run command
+git restore hyphen hyphen
+
+14
+00:00:58,359 --> 00:01:01,200
+source head tilde n file underscore name.
+
+15
+00:01:01,780 --> 00:01:05,890
+N here refers to the number of
+commits prior to head we want to go back.
+
+16
+00:01:08,709 --> 00:01:12,079
+We can also use git
+restore to unstage the files
+
+17
+00:01:12,079 --> 00:01:14,769
+added to the staging area using git add.
+
+18
+00:01:16,090 --> 00:01:20,719
+In order to do that, just run git
+restore hyphen hyphen staged file name.
+
+19
+00:01:22,379 --> 00:01:23,900
+Let's see all of this in practice.
+
+20
+00:01:24,459 --> 00:01:29,760
+So we would be practicing git restore
+file name to restore the changes in the file.
+
+21
+00:01:30,359 --> 00:01:33,519
+Then we would be
+restoring to the previous commit.
+
+22
+00:01:34,420 --> 00:01:38,290
+And then finally, we'll try
+restoring the staged files.
+
+23
+00:01:39,519 --> 00:01:43,939
+So let's go back to the file1.txt again,
+
+24
+00:01:43,939 --> 00:01:49,469
+and let's say here I have
+written git restore demo1.
+
+25
+00:01:51,129 --> 00:01:56,439
+Now here, you can also do git
+checkout file1.txt, and this works perfect.
+
+26
+00:01:57,640 --> 00:02:04,400
+But instead, you can also do git
+restore and the file name, file1.txt.
+
+27
+00:02:07,799 --> 00:02:09,219
+And now the changes are back.
+
+28
+00:02:10,979 --> 00:02:15,060
+One interesting thing with git
+restore is that you can move
+
+29
+00:02:15,060 --> 00:02:19,129
+to the version of this file
+to previous commits as well.
+
+30
+00:02:19,789 --> 00:02:23,990
+Like for example, let me
+change this back and commit it.
+
+31
+00:02:25,969 --> 00:02:34,840
+Git add all, git commit, restore demo one.
+
+32
+00:02:39,750 --> 00:02:46,080
+I need to do git commit
+minus m. Let's change again.
+
+33
+00:02:49,490 --> 00:02:56,210
+You can also use git commit hyphen
+am. So this will add as well as commit.
+
+34
+00:02:56,650 --> 00:03:00,810
+So this is a shortcut, but it only
+works if you are modifying a file.
+
+35
+00:03:01,349 --> 00:03:03,979
+If you have created a new
+file, then it will not work.
+
+36
+00:03:04,620 --> 00:03:07,560
+So you will need to run
+add commands separately.
+
+37
+00:03:08,199 --> 00:03:14,080
+But since here we are modifying an
+existing file, so we can do git commit minus am.
+
+38
+00:03:17,689 --> 00:03:24,780
+Let's create a, Third commit as
+well, so am restore demo three.
+
+39
+00:03:28,419 --> 00:03:33,419
+Now I want to go back to
+the third last commit.
+
+40
+00:03:34,300 --> 00:03:36,500
+Let's say here, restore demo one,
+
+41
+00:03:36,500 --> 00:03:42,719
+so I want this file to be same as it
+was in this commit, third last commit.
+
+42
+00:03:43,939 --> 00:03:53,050
+So I will just copy this hash and
+say, Git restore, hyphen hyphen source,
+
+43
+00:03:53,050 --> 00:04:00,860
+this commit ID, and the name of the file.
+
+44
+00:04:07,120 --> 00:04:10,780
+Now you can see it's
+restored to the third last commit.
+
+45
+00:04:13,210 --> 00:04:17,550
+Instead of copying the hash,
+you can also use the head.
+
+46
+00:04:18,230 --> 00:04:23,509
+So we want to go to the third
+last commit. So we can say here,
+
+47
+00:04:23,509 --> 00:04:27,420
+instead of commit hash,
+go back three commits.
+
+48
+00:04:30,620 --> 00:04:32,779
+Let's first restore it back.
+
+49
+00:04:34,360 --> 00:04:39,879
+And now do git restore
+source head 3 and file 1.txt.
+
+50
+00:04:43,089 --> 00:04:44,889
+Okay, we have moved further.
+
+51
+00:04:45,569 --> 00:04:49,519
+So we want to go two commits.
+
+52
+00:04:50,339 --> 00:04:55,250
+We want to go to this restore
+demo one, which means from the head,
+
+53
+00:04:55,250 --> 00:04:57,699
+we want to go two commits before.
+
+54
+00:04:59,540 --> 00:05:03,449
+So I need to write here
+two instead of three.
+
+55
+00:05:03,470 --> 00:05:08,410
+Okay, now it's restored to demo one.
+
+56
+00:05:12,560 --> 00:05:16,540
+So this is how you can
+use the git restore command
+
+57
+00:05:16,540 --> 00:05:19,439
+in restoring the commits,
+actually to any commit.
+
+58
+00:05:21,060 --> 00:05:24,519
+We can also use git
+restore to unstage the changes.
+
+59
+00:05:25,389 --> 00:05:28,870
+So let's make two changes in the file one.
+
+60
+00:05:29,569 --> 00:05:34,529
+Let's change it to
+unstaged, similarly unstaged.
+
+61
+00:05:35,970 --> 00:05:40,019
+And now I will add these
+two files to my staging area.
+
+62
+00:05:42,269 --> 00:05:44,339
+Let's check using git status command,
+
+63
+00:05:44,339 --> 00:05:47,790
+and it says that you have
+modified these two files,
+
+64
+00:05:47,790 --> 00:05:51,240
+and they have also been
+added to the staging area.
+
+65
+00:05:52,920 --> 00:05:57,050
+Now, in order to unstage these files,
+
+66
+00:05:57,050 --> 00:06:04,160
+I can use git restore hyphen
+hyphen staged dot, Using dot,
+
+67
+00:06:04,160 --> 00:06:06,050
+it will unstage all the files.
+
+68
+00:06:06,550 --> 00:06:13,060
+If you want to unstage a particular file,
+then you need to specify the file name,
+
+69
+00:06:13,060 --> 00:06:15,500
+and this will only unstage file1.txt.
+
+70
+00:06:16,139 --> 00:06:23,529
+So now if I run git status, you can
+see I have one file in the staging area,
+
+71
+00:06:23,529 --> 00:06:25,579
+and file1.txt has been unstaged.
+
+72
+00:06:26,850 --> 00:06:29,949
+Now, it's easy to do this using BS code.
+
+73
+00:06:30,370 --> 00:06:34,370
+So if you want to just add
+your files to staging area,
+
+74
+00:06:34,370 --> 00:06:39,029
+you can go to the source control
+tab again and just click on plus.
+
+75
+00:06:39,569 --> 00:06:42,000
+It will add the files to the staging area.
+
+76
+00:06:42,800 --> 00:06:46,550
+And similarly, you can click
+on minus, unstage changes,
+
+77
+00:06:46,550 --> 00:06:50,720
+and this will move them
+back to the unstaged area.
+
+78
+00:06:52,000 --> 00:06:55,040
+You can also stage and
+unstage all the files.
+
+79
+00:06:56,060 --> 00:07:01,500
+With the plus icon in front of the
+changes, you can stage all of them together.
+
+80
+00:07:02,480 --> 00:07:06,949
+And to unstage, you can use
+minus with unstage all changes.
+
+81
+00:07:08,610 --> 00:07:12,329
+And this will be bringing all
+your files back to the unstage area.
+
+82
+00:07:13,250 --> 00:07:18,279
+So just feel free to use git restore
+command or use VS Code to do the same.

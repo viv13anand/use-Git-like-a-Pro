@@ -1,0 +1,57 @@
+1
+00:00:06,620 --> 00:00:08,539
+Welcome to lesson four, Undoing Changes.
+
+2
+00:00:09,220 --> 00:00:13,289
+In this lesson, we will explore
+the essential commands in Git that
+
+3
+00:00:13,289 --> 00:00:16,679
+help you reverse or modify
+changes in your project history.
+
+4
+00:00:17,440 --> 00:00:20,660
+These are invaluable when
+you need to fix mistakes.
+
+5
+00:00:21,559 --> 00:00:26,149
+We will begin by learning how
+to use git checkout command
+
+6
+00:00:26,149 --> 00:00:29,059
+to switch between
+branches and restore files,
+
+7
+00:00:29,059 --> 00:00:33,649
+followed by understanding git restore
+command to revert working directory changes.
+
+8
+00:00:34,689 --> 00:00:39,109
+Then we'll dive into Git reset
+to undo commits. And finally,
+
+9
+00:00:39,109 --> 00:00:40,780
+we'll explore Git revert,
+
+10
+00:00:40,780 --> 00:00:45,359
+a command used to undo changes
+safely in a collaborative environment.
+
+11
+00:00:46,240 --> 00:00:49,049
+And to check your understanding,
+we'll run through an exercise.
+
+12
+00:00:49,729 --> 00:00:52,490
+That's the roadmap for this
+lesson. Let's get started.

@@ -1,0 +1,402 @@
+1
+00:00:06,679 --> 00:00:11,269
+You can use git reset command to
+move files from stage to unstage.
+
+2
+00:00:11,949 --> 00:00:16,980
+You can do the same with git restore
+as well, but the command is a bit long.
+
+3
+00:00:17,739 --> 00:00:21,469
+With git reset, you can simply
+do git reset, the file name.
+
+4
+00:00:22,230 --> 00:00:26,320
+And if you want to move all of
+your files to the unstaging area,
+
+5
+00:00:26,320 --> 00:00:28,070
+you can do git reset dot.
+
+6
+00:00:29,160 --> 00:00:31,420
+One interesting thing
+which you can do with
+
+7
+00:00:31,420 --> 00:00:33,679
+the git reset command
+is to remove commits.
+
+8
+00:00:34,579 --> 00:00:36,560
+So there can be two types of reset.
+
+9
+00:00:37,299 --> 00:00:39,649
+First one is that you can do a hard reset.
+
+10
+00:00:40,649 --> 00:00:44,000
+What a hard reset does
+is that it will remove
+
+11
+00:00:44,000 --> 00:00:46,350
+the commits and don't keep your changes.
+
+12
+00:00:48,009 --> 00:00:53,960
+The command for it is git reset, the
+commit hash, where you want to reset to,
+
+13
+00:00:53,960 --> 00:00:55,820
+and use hyphen hyphen hard.
+
+14
+00:00:57,119 --> 00:00:58,700
+Another one is a soft reset.
+
+15
+00:00:59,280 --> 00:01:01,149
+So this will remove the commits,
+
+16
+00:01:01,149 --> 00:01:04,569
+but all the changes will be
+back in your working directory.
+
+17
+00:01:06,310 --> 00:01:09,500
+You can run git reset,
+just the commit hash,
+
+18
+00:01:09,500 --> 00:01:13,400
+or you can also use hyphen
+hyphen soft, but by default,
+
+19
+00:01:13,400 --> 00:01:19,069
+if you use git reset with commit
+hash, it is going to do a soft reset.
+
+20
+00:01:20,409 --> 00:01:22,909
+git reset command is really
+helpful if you accidentally
+
+21
+00:01:22,909 --> 00:01:26,239
+make a commit to a branch
+and you want to remove it.
+
+22
+00:01:26,760 --> 00:01:31,989
+So this is the time when you would be
+using git reset command a lot of times.
+
+23
+00:01:32,709 --> 00:01:35,409
+Now let's practice these three things.
+
+24
+00:01:35,849 --> 00:01:39,290
+Resetting your files from
+staging area to unstaging area.
+
+25
+00:01:39,950 --> 00:01:41,379
+Desetting to a commit.
+
+26
+00:01:42,640 --> 00:01:45,459
+So we are back to the Git
+video course repository.
+
+27
+00:01:46,019 --> 00:01:51,700
+In the file one, let's change
+the text to Git reset demo.
+
+28
+00:01:52,700 --> 00:01:56,299
+Also, let's change the
+file to Git reset demo two.
+
+29
+00:02:00,120 --> 00:02:04,829
+Now, in order to add these
+files in the staging area,
+
+30
+00:02:04,829 --> 00:02:08,250
+we can do git add dot git status.
+
+31
+00:02:09,050 --> 00:02:09,870
+We have added it.
+
+32
+00:02:10,590 --> 00:02:15,780
+And now, in order to unstage it, it's
+easier to do it with git reset dot.
+
+33
+00:02:18,889 --> 00:02:24,080
+Now if I do git status, the files
+have been moved to unstaging area.
+
+34
+00:02:25,139 --> 00:02:31,300
+If you want to unstage just a
+particular file, let's add it again,
+
+35
+00:02:31,300 --> 00:02:36,990
+and you can do git reset
+and the name of the file.
+
+36
+00:02:40,270 --> 00:02:42,629
+Let's run the git status command again,
+
+37
+00:02:42,629 --> 00:02:47,000
+and you can see we have only moved
+file1.txt into the unstaging area.
+
+38
+00:02:48,090 --> 00:02:50,810
+You could do the same
+using git restore command,
+
+39
+00:02:50,810 --> 00:02:52,930
+which we talked in the previous section.
+
+40
+00:02:53,569 --> 00:03:02,560
+git restore, not a resort, git restore,
+and hyphen hyphen staged, and the file name.
+
+41
+00:03:04,310 --> 00:03:10,060
+But this is a bit
+inconvenient, or a bit long, I would say.
+
+42
+00:03:10,500 --> 00:03:13,280
+So mostly we can run the
+git reset command to do this.
+
+43
+00:03:17,639 --> 00:03:22,430
+The second thing which we can do
+with git reset is to remove commits.
+
+44
+00:03:23,659 --> 00:03:25,889
+So let's first make some commits.
+
+45
+00:03:27,449 --> 00:03:31,090
+Let's commit our files, git add all.
+
+46
+00:03:32,030 --> 00:03:38,710
+Git commit, minus m, reset demo1.
+
+47
+00:03:41,460 --> 00:03:50,199
+Let's change the files
+again to file2, demo2, file1.
+
+48
+00:03:52,629 --> 00:04:02,939
+I've changed both the files again, and
+let's commit them, git add all, git commit,
+
+49
+00:04:02,939 --> 00:04:06,379
+minus m, reset, demo two.
+
+50
+00:04:11,360 --> 00:04:12,639
+Now let's run git log.
+
+51
+00:04:13,319 --> 00:04:19,029
+Now we want to remove two previous
+commits, resetDemo1 and resetDemo2.
+
+52
+00:04:19,750 --> 00:04:23,100
+So I will copy the hash
+of one previous commit,
+
+53
+00:04:23,100 --> 00:04:27,129
+because this is the commit
+where I want to move back to,
+
+54
+00:04:27,129 --> 00:04:28,800
+removing my top two commits.
+
+55
+00:04:29,660 --> 00:04:30,680
+So I'll copy the hash.
+
+56
+00:04:32,430 --> 00:04:38,459
+And I will do git reset to this commit.
+
+57
+00:04:41,819 --> 00:04:46,970
+Now I get the changes back, git status.
+
+58
+00:04:50,509 --> 00:04:55,259
+So there are changes in my working
+directory, but if I check git log,
+
+59
+00:04:57,920 --> 00:05:02,199
+The commits have been removed.
+There are no commits for git reset.
+
+60
+00:05:02,740 --> 00:05:07,250
+It's only for restore. So we have
+successfully reset the commits,
+
+61
+00:05:18,829 --> 00:05:24,079
+So this is useful in case you made some
+commits, but you want to make more changes.
+
+62
+00:05:24,720 --> 00:05:30,100
+So you can just reset them and make
+final changes and then commit them again.
+
+63
+00:05:31,319 --> 00:05:36,589
+So this was a soft reset because the
+changes are in your working directory.
+
+64
+00:05:37,889 --> 00:05:43,970
+If I commit it again, let's
+change these files again.
+
+65
+00:05:44,089 --> 00:05:45,509
+First, git.
+
+66
+00:05:51,139 --> 00:05:51,899
+Okay, file.
+
+67
+00:05:54,009 --> 00:05:57,970
+Demo1 and Demo1.
+
+68
+00:06:00,129 --> 00:06:02,569
+Let's make two commits again.
+
+69
+00:06:02,589 --> 00:06:13,149
+Get commit minus M, reset Demo1.
+
+70
+00:06:18,879 --> 00:06:21,269
+Demo two, file two.
+
+71
+00:06:22,970 --> 00:06:24,430
+I'm making one more commit.
+
+72
+00:06:25,009 --> 00:06:27,319
+Demo two, file one.
+
+73
+00:06:29,540 --> 00:06:35,610
+So let's make another commit, git
+add all, git commit, reset demo2.
+
+74
+00:06:36,930 --> 00:06:42,329
+Let's verify in the git log. I have
+made two commits, demo1 and demo2.
+
+75
+00:06:43,540 --> 00:06:47,980
+Now I'm going to remove it, but
+I'm going to do a hard reset.
+
+76
+00:06:48,759 --> 00:06:51,560
+So we do the same thing
+just with the hard flag.
+
+77
+00:06:52,079 --> 00:06:58,189
+So copy the hash one before we want to
+move to the restore demo three commit.
+
+78
+00:06:58,759 --> 00:07:00,290
+So I will copy the hash.
+
+79
+00:07:02,610 --> 00:07:10,170
+And here I can say git reset
+hyphen hyphen hard and the commit hash.
+
+80
+00:07:13,019 --> 00:07:20,040
+So now if I check git log,
+there are no commits for the reset.
+
+81
+00:07:21,720 --> 00:07:26,939
+But I also have lost all the
+changes which I made because git status.
+
+82
+00:07:28,850 --> 00:07:33,329
+Doesn't show me any changes.
+So I change these two files,
+
+83
+00:07:33,329 --> 00:07:36,100
+but I don't have those changes anymore.
+
+84
+00:07:36,699 --> 00:07:40,149
+So whenever you are
+using git reset with heart,
+
+85
+00:07:40,149 --> 00:07:43,990
+just be conscious that you
+will lose all the changes.
+
+86
+00:07:44,649 --> 00:07:47,480
+So in case you want to
+still have those changes,
+
+87
+00:07:47,480 --> 00:07:51,730
+but you want to remove the
+commits as well. So do a soft reset.

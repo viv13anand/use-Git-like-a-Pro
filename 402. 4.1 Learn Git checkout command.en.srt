@@ -1,0 +1,364 @@
+1
+00:00:06,790 --> 00:00:08,990
+Git checkout is a superpower command.
+
+2
+00:00:09,609 --> 00:00:11,650
+It can be used to do multiple things.
+
+3
+00:00:12,349 --> 00:00:16,500
+The first thing which you can do with
+checkout command is switch branches.
+
+4
+00:00:17,140 --> 00:00:21,199
+So you can run git checkout and the
+branch name where you want to move to.
+
+5
+00:00:22,519 --> 00:00:25,050
+Second thing which you
+can do with the checkout
+
+6
+00:00:25,050 --> 00:00:27,300
+command is undo the changes in your file.
+
+7
+00:00:27,949 --> 00:00:32,649
+You need to do git checkout and the file
+which you want to undo the changes in.
+
+8
+00:00:34,020 --> 00:00:38,189
+Third, which you can do with the git
+checkout is moving to a commit or tag.
+
+9
+00:00:38,630 --> 00:00:42,280
+So you can do git
+checkout and have a commit hash,
+
+10
+00:00:42,280 --> 00:00:44,929
+and it will move you to that commit.
+
+11
+00:00:46,090 --> 00:00:48,270
+Let's see how we can use checkout command.
+
+12
+00:00:49,640 --> 00:00:54,250
+Let's go to our file one, and I'm on
+the same repository Git video course.
+
+13
+00:00:55,289 --> 00:01:00,950
+I will change this text to checkout demo.
+
+14
+00:01:05,379 --> 00:01:10,329
+Now if I do git status, it tells me
+that you have modified file1.txt.
+
+15
+00:01:12,060 --> 00:01:13,209
+Let's run git diff.
+
+16
+00:01:14,650 --> 00:01:17,629
+Git diff tells me that
+these were the changes before.
+
+17
+00:01:17,890 --> 00:01:20,049
+This is changes added from remote.
+
+18
+00:01:20,590 --> 00:01:22,950
+And now I have changed
+the text to checkout demo.
+
+19
+00:01:24,569 --> 00:01:30,079
+Now, if I want to go back to my previous
+changes, the one which I had committed,
+
+20
+00:01:30,079 --> 00:01:32,019
+I can use git checkout command.
+
+21
+00:01:33,640 --> 00:01:36,629
+I can do git checkout and the file.
+
+22
+00:01:38,569 --> 00:01:42,790
+So let's copy this file name because I
+want to restore the changes of file1.txt.
+
+23
+00:01:45,950 --> 00:01:48,140
+And now you can see the changes are back.
+
+24
+00:01:49,680 --> 00:01:54,420
+You can also do the same from the
+VS Code graphical user interface.
+
+25
+00:01:55,239 --> 00:01:56,939
+So let's make the changes again.
+
+26
+00:01:57,680 --> 00:02:01,280
+Let's say I've made
+checkout demo changes again.
+
+27
+00:02:02,060 --> 00:02:04,150
+And now go to the source control tab.
+
+28
+00:02:06,549 --> 00:02:08,900
+In the VS Code source control tab,
+
+29
+00:02:08,900 --> 00:02:12,259
+you will see discard
+changes in front of the file.
+
+30
+00:02:12,979 --> 00:02:15,990
+There is also an option to
+discard all the changes.
+
+31
+00:02:16,409 --> 00:02:19,560
+So if you have multiple
+changes, you can discard all of them.
+
+32
+00:02:20,319 --> 00:02:26,189
+But let's say I just want to discard
+file1.txt, then I will just click on discard,
+
+33
+00:02:26,189 --> 00:02:29,870
+and this will restore my
+changes to the previous commit.
+
+34
+00:02:31,810 --> 00:02:37,090
+Now, in case you have more files
+changed, like let's change file1 again.
+
+35
+00:02:40,210 --> 00:02:49,009
+And also change commit demo
+file to checkout demo file to.
+
+36
+00:02:50,110 --> 00:02:52,349
+So now I have changed two files.
+
+37
+00:02:52,909 --> 00:02:59,400
+And if I want to discard all of those
+files, then I can do git checkout dot.
+
+38
+00:03:02,300 --> 00:03:05,860
+This will restore all of my
+files to the previous version.
+
+39
+00:03:06,939 --> 00:03:13,270
+Similarly, you can do with the VS
+Code. Just click on Discard All Changes.
+
+40
+00:03:19,400 --> 00:03:22,250
+So in the changes, you
+can see there is an icon.
+
+41
+00:03:22,810 --> 00:03:26,889
+Just click on discard all changes, and
+this will discard all of your files.
+
+42
+00:03:31,409 --> 00:03:34,819
+The second use of checkout
+command can be to switch branches.
+
+43
+00:03:35,379 --> 00:03:38,379
+I know we have not talked
+a lot about branches yet,
+
+44
+00:03:38,379 --> 00:03:41,389
+but we would be talking
+about it in the next lesson.
+
+45
+00:03:41,889 --> 00:03:46,000
+So far, let's see how we can
+switch branches using checkout command.
+
+46
+00:03:47,169 --> 00:03:50,810
+So let me create a branch
+with git branch command.
+
+47
+00:03:51,789 --> 00:03:54,569
+Let's call it feature checkout.
+
+48
+00:03:57,900 --> 00:04:04,180
+Now if I want to move to this
+branch, first let's see The git status.
+
+49
+00:04:05,060 --> 00:04:08,770
+In git status, it says
+you are on branch main,
+
+50
+00:04:08,770 --> 00:04:12,110
+and I want to move to
+feature checkout branch.
+
+51
+00:04:13,129 --> 00:04:19,470
+So I can do git
+checkout, feed slash checkout.
+
+52
+00:04:20,970 --> 00:04:24,269
+And now it says you have
+switched to branch feed slash checkout.
+
+53
+00:04:25,470 --> 00:04:28,100
+You can verify it with the
+git status command again,
+
+54
+00:04:28,100 --> 00:04:30,459
+and it tells you you are on this branch.
+
+55
+00:04:31,240 --> 00:04:35,470
+So we have seen how we can
+use git checkout to restore
+
+56
+00:04:35,470 --> 00:04:38,639
+our files and also how to
+switch between branches.
+
+57
+00:04:39,629 --> 00:04:42,350
+Third thing that we talked
+about is moving to commits.
+
+58
+00:04:43,149 --> 00:04:46,529
+So let's first see the history of
+our commits with git log command.
+
+59
+00:04:47,470 --> 00:04:50,420
+Now let's see I want to move
+to the second last commit.
+
+60
+00:04:51,180 --> 00:04:52,839
+So first I'll copy this hash.
+
+61
+00:04:55,079 --> 00:05:00,949
+And then with the checkout command, I
+can use git checkout and the commit hash.
+
+62
+00:05:01,269 --> 00:05:04,560
+We don't need the author,
+so just remove this one.
+
+63
+00:05:06,829 --> 00:05:09,610
+So now we have moved to
+the particular commit
+
+64
+00:05:09,610 --> 00:05:12,689
+and it says you are in
+a detached head state.
+
+65
+00:05:13,470 --> 00:05:16,110
+This means that you
+don't belong to any branch.
+
+66
+00:05:16,689 --> 00:05:19,600
+And if you want to make any changes,
+
+67
+00:05:19,600 --> 00:05:22,139
+the ideal
+recommendation is that you create
+
+68
+00:05:22,139 --> 00:05:25,040
+a branch from this
+commit using get branch.
+
+69
+00:05:33,550 --> 00:05:35,389
+Check out demo two.
+
+70
+00:05:41,129 --> 00:05:44,339
+And I also want to move to this branch.
+
+71
+00:05:49,120 --> 00:05:50,879
+And if I check the git log,
+
+72
+00:05:53,329 --> 00:05:57,819
+We are on the third last commit,
+from where we cut this branch.
+
+73
+00:05:58,939 --> 00:06:02,779
+So all you need to remember is that
+whenever you are moving to a commit,
+
+74
+00:06:02,779 --> 00:06:04,829
+you will be in a detached head state.
+
+75
+00:06:05,269 --> 00:06:09,350
+And if you want to make more
+changes on top of that commit,
+
+76
+00:06:09,350 --> 00:06:10,910
+you need to create branches.
+
+77
+00:06:11,329 --> 00:06:14,839
+Don't worry if you don't understand
+the branches and everything right now.
+
+78
+00:06:14,980 --> 00:06:16,480
+We'll get to it in the later part.

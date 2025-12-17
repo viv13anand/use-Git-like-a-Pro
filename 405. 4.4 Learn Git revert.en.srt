@@ -1,0 +1,278 @@
+1
+00:00:06,730 --> 00:00:12,599
+Git revert command also undoes the
+commits, but instead of removing the commit,
+
+2
+00:00:12,599 --> 00:00:16,219
+it creates an additional
+commit undoing that change.
+
+3
+00:00:17,219 --> 00:00:20,339
+The commit that is created
+is called a revert commit.
+
+4
+00:00:21,539 --> 00:00:26,039
+So let's see what is the difference
+between the reset and git revert,
+
+5
+00:00:26,039 --> 00:00:30,530
+because in the previous section, we
+used git reset to remove our commits.
+
+6
+00:00:31,640 --> 00:00:39,270
+So with the git reset, let's say we
+want to reset the two commits, C4 and C5.
+
+7
+00:00:39,990 --> 00:00:42,880
+With the git reset, the
+head will move to C3.
+
+8
+00:00:43,979 --> 00:00:48,659
+Which means that we will not have
+C4 and C5 in our commit history,
+
+9
+00:00:48,659 --> 00:00:51,659
+and that we also saw with the git log.
+
+10
+00:00:52,689 --> 00:00:56,450
+The issue with git reset is that
+you can lose the shared history.
+
+11
+00:00:58,189 --> 00:01:03,049
+Let's say you had these five
+commits in your master branch,
+
+12
+00:01:03,049 --> 00:01:07,480
+and somebody has created
+another branch from the commit C4.
+
+13
+00:01:08,760 --> 00:01:12,920
+Now you do git reset and remove C4 and C5.
+
+14
+00:01:15,129 --> 00:01:19,239
+Now, the other person who is
+working on the same project has C4
+
+15
+00:01:19,239 --> 00:01:22,719
+and C5 and has the work
+which is based on these
+
+16
+00:01:22,719 --> 00:01:24,930
+two commits, but you have removed it.
+
+17
+00:01:25,810 --> 00:01:29,209
+And now if you push the removed commits,
+
+18
+00:01:29,209 --> 00:01:33,459
+then there will not be any
+history regarding those commits.
+
+19
+00:01:34,159 --> 00:01:36,099
+So this can be a bit risky.
+
+20
+00:01:36,700 --> 00:01:39,370
+So instead of doing git reset,
+
+21
+00:01:39,370 --> 00:01:45,590
+if the commits are already pushed to
+the remote server, we use git revert.
+
+22
+00:01:48,230 --> 00:01:52,219
+What Git revert does is that
+it creates a new commit that
+
+23
+00:01:52,219 --> 00:01:54,879
+matches the historical
+state of the previous commit.
+
+24
+00:01:56,079 --> 00:01:59,340
+Also, Git revert doesn't
+change any project history.
+
+25
+00:02:00,840 --> 00:02:05,950
+So what Git revert will do in this
+case is that it will create an additional
+
+26
+00:02:05,950 --> 00:02:11,900
+commit So this commit will
+undo the changes of C4 and C5,
+
+27
+00:02:11,900 --> 00:02:16,870
+but in the history, you will still
+see that you had C4 and C5 commit.
+
+28
+00:02:18,569 --> 00:02:22,710
+And now you have created a separate
+commit with undoing those changes.
+
+29
+00:02:23,330 --> 00:02:25,389
+So this is a safe approach,
+
+30
+00:02:25,389 --> 00:02:29,159
+especially in case your commits
+are pushed to the remote server.
+
+31
+00:02:30,120 --> 00:02:34,060
+So to sum up, Git revert does
+not change the project history,
+
+32
+00:02:34,060 --> 00:02:37,009
+which makes it safe for
+the commits which are
+
+33
+00:02:37,009 --> 00:02:38,979
+already published on
+this shared repository.
+
+34
+00:02:39,719 --> 00:02:41,639
+Let's practice the Git revert command.
+
+35
+00:02:42,759 --> 00:02:44,520
+So let's go back to our project.
+
+36
+00:02:45,770 --> 00:02:48,000
+I will again change the two files.
+
+37
+00:02:48,939 --> 00:02:53,569
+Now instead of git restore,
+
+38
+00:02:53,569 --> 00:03:04,669
+let me do it git revert demo1
+and git revert demo1 file2.
+
+39
+00:03:09,189 --> 00:03:10,810
+Let's commit this.
+
+40
+00:03:12,189 --> 00:03:25,750
+git commit minus am git revert
+demo1 Let's check the git log command,
+
+41
+00:03:25,750 --> 00:03:29,469
+and we have made this git
+reward demo one commit.
+
+42
+00:03:30,580 --> 00:03:34,009
+Now, what I want to do
+is I want to remove this
+
+43
+00:03:34,009 --> 00:03:36,300
+commit because let's say
+I accidentally made it
+
+44
+00:03:36,300 --> 00:03:39,729
+and I want to undo the
+changes or I want to undo
+
+45
+00:03:39,729 --> 00:03:42,009
+the changes because
+there was some bug here.
+
+46
+00:03:43,439 --> 00:03:46,060
+So I will just copy the commit hash.
+
+47
+00:03:47,389 --> 00:03:53,250
+Now, instead of doing git
+reset, I will do git revert.
+
+48
+00:03:55,759 --> 00:04:00,780
+This hash belongs to the
+commit which you want to revert.
+
+49
+00:04:02,039 --> 00:04:04,770
+So because I wanted to
+revert the last commit,
+
+50
+00:04:04,770 --> 00:04:07,490
+so I copied the hash of the last commit.
+
+51
+00:04:08,409 --> 00:04:18,860
+So once I do git revert, now git asks me
+to To write a message for the reverted commit, automatically
+
+52
+00:04:18,860 --> 00:04:22,850
+Git assigns a message.
+It says revert and same
+
+53
+00:04:22,850 --> 00:04:25,629
+message which I had
+provided to that commit.
+
+54
+00:04:26,910 --> 00:04:29,529
+So let's use the default message.
+
+55
+00:04:31,459 --> 00:04:38,189
+Now if I do git log, I have another
+commit which reverts this commit.
+
+56
+00:04:39,129 --> 00:04:44,480
+So if you see file one and file
+two, I have git restore demo 3,
+
+57
+00:04:44,480 --> 00:04:48,250
+but I had changed it to git revert demo 1.
+
+58
+00:04:48,750 --> 00:04:53,870
+So the changes are restored, but we
+have also maintained the history.
+
+59
+00:04:54,889 --> 00:05:00,810
+We know that this commit was made to the
+branch, but we also got the changes back.
