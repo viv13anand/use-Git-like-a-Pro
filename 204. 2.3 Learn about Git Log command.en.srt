@@ -1,0 +1,144 @@
+1
+00:00:06,599 --> 00:00:09,789
+Before we jump into using
+git fetch and git pull,
+
+2
+00:00:09,789 --> 00:00:12,339
+let's quickly see what git log command is.
+
+3
+00:00:13,140 --> 00:00:15,779
+So this command basically
+tells you the history of
+
+4
+00:00:15,779 --> 00:00:18,429
+all the commits you have
+made to the repository.
+
+5
+00:00:19,109 --> 00:00:23,370
+The history of commits include
+hash, messages, and metadata.
+
+6
+00:00:26,239 --> 00:00:30,019
+We will be practicing three commands,
+git log, git log hyphen hyphen author,
+
+7
+00:00:30,019 --> 00:00:32,049
+and git log hyphen hyphen one line.
+
+8
+00:00:32,570 --> 00:00:35,350
+Let's see what these commands look like.
+
+9
+00:00:36,549 --> 00:00:41,590
+So going back to our
+previous project, git commit demo,
+
+10
+00:00:41,590 --> 00:00:49,140
+we already saw the git log command.
+Let's recap again. So if we do git log,
+
+11
+00:00:49,140 --> 00:00:51,780
+it displays the
+history of all the commits.
+
+12
+00:00:52,539 --> 00:00:56,340
+And in the commits, you can
+see there is this long hash.
+
+13
+00:00:56,979 --> 00:01:00,750
+So this is your hash,
+which is used basically to
+
+14
+00:01:00,750 --> 00:01:03,759
+if you want to
+identify a particular commit.
+
+15
+00:01:04,549 --> 00:01:08,310
+And then you have author who made
+the commit and the commit message.
+
+16
+00:01:08,909 --> 00:01:12,879
+And if you have some metadata,
+like commit footers or dates,
+
+17
+00:01:12,879 --> 00:01:16,129
+anything that is also
+displayed in the Git log.
+
+18
+00:01:17,920 --> 00:01:22,620
+Now, if you want to filter
+out the commits using author,
+
+19
+00:01:22,620 --> 00:01:29,890
+then you can do git log hyphen hyphen
+author, and just type the name of the author.
+
+20
+00:01:30,750 --> 00:01:36,250
+So I wrote Ashima, and I can
+see all the commits by Ashima.
+
+21
+00:01:37,209 --> 00:01:40,109
+If you just search by
+author, let's say Pete,
+
+22
+00:01:40,109 --> 00:01:44,310
+it did not show any commits
+because Pete did not make any commit.
+
+23
+00:01:47,900 --> 00:01:52,939
+Now, if you must have noticed in
+the git log, it is like really long.
+
+24
+00:01:53,760 --> 00:01:58,099
+Sometimes what we only want to see
+is like a concise version of it.
+
+25
+00:01:58,640 --> 00:02:02,090
+We only are concerned about
+the author and maybe the hash.
+
+26
+00:02:02,689 --> 00:02:07,549
+So you can use git log
+hyphen hyphen one line.
+
+27
+00:02:08,469 --> 00:02:12,689
+And this is much more cleaner. You can
+view more commits and you can see the hash.
+
+28
+00:02:13,469 --> 00:02:15,580
+It doesn't show you the author, sorry,
+
+29
+00:02:15,580 --> 00:02:18,900
+but it shows you the commit
+message and the commit hash.
+
+30
+00:02:19,599 --> 00:02:21,699
+So that was it about Git log command.

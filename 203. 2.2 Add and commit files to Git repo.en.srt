@@ -1,0 +1,514 @@
+1
+00:00:06,679 --> 00:00:10,009
+We are going to practice more on
+adding and committing the files.
+
+2
+00:00:10,890 --> 00:00:14,949
+So what we are going to do in this
+section is basically create a new repository.
+
+3
+00:00:15,570 --> 00:00:19,149
+Then we'll create new files,
+change some existing files,
+
+4
+00:00:19,149 --> 00:00:24,899
+and add files to the staging area. And
+finally, we make commit to the repository.
+
+5
+00:00:25,539 --> 00:00:29,820
+I would be using Visual Studio
+Code, so use any text editor you want.
+
+6
+00:00:31,219 --> 00:00:32,460
+So let's practice.
+
+7
+00:00:34,049 --> 00:00:40,530
+Let's start with creating a
+directory. Let's say git commit demo.
+
+8
+00:00:42,409 --> 00:00:49,740
+Let's move to this git commit demo
+and open it in the coding editor.
+
+9
+00:00:50,420 --> 00:00:54,579
+Okay, right now it's an empty
+project. It's not a git repository.
+
+10
+00:00:54,840 --> 00:00:57,689
+And how do we know
+it's not a git repository
+
+11
+00:00:57,689 --> 00:01:00,549
+is because if I do ls,
+there's nothing in it.
+
+12
+00:01:02,549 --> 00:01:06,219
+In order to make it a Git
+repository, we need to do git init.
+
+13
+00:01:08,159 --> 00:01:14,680
+Now, one thing I want you to
+notice here is that as I did get in it,
+
+14
+00:01:14,680 --> 00:01:18,129
+there is some message
+in the yellow that using
+
+15
+00:01:18,129 --> 00:01:21,200
+master as the name of the initial branch,
+
+16
+00:01:21,200 --> 00:01:24,269
+this default branch
+name is subject to change.
+
+17
+00:01:24,849 --> 00:01:30,519
+So basically, by default, Git has
+initialized the branch as master.
+
+18
+00:01:31,290 --> 00:01:35,620
+And if you do git status, it will
+tell you that you are on branch master.
+
+19
+00:01:37,269 --> 00:01:41,519
+However, on GitHub, main is
+used as the default branch,
+
+20
+00:01:41,519 --> 00:01:47,469
+so it will often ask you to
+change the master branch name to main.
+
+21
+00:01:48,170 --> 00:01:50,859
+It depends on project to project.
+
+22
+00:01:52,060 --> 00:01:56,579
+Some projects use trunk, some projects
+use develop, some projects use master.
+
+23
+00:01:57,239 --> 00:02:00,370
+So it's really based on the project.
+
+24
+00:02:01,510 --> 00:02:03,650
+We would be working mainly with the main.
+
+25
+00:02:04,390 --> 00:02:06,030
+So I will rename it to main.
+
+26
+00:02:07,129 --> 00:02:10,610
+There is another way
+which you can also change
+
+27
+00:02:10,610 --> 00:02:13,699
+your default branch
+name from master to main.
+
+28
+00:02:14,120 --> 00:02:18,120
+So it says that if you want to
+change your default branch name,
+
+29
+00:02:18,120 --> 00:02:20,580
+you can simply add it to the config.
+
+30
+00:02:21,300 --> 00:02:24,349
+So that the next time
+when you do git init,
+
+31
+00:02:24,349 --> 00:02:27,099
+it will initialize it
+as main and not master.
+
+32
+00:02:28,199 --> 00:02:31,090
+So let's see what happens if I run this.
+
+33
+00:02:31,969 --> 00:02:38,460
+So git config Just copy it again.
+
+34
+00:02:39,159 --> 00:02:42,159
+Git config in a default
+branch, and here, if I
+
+35
+00:02:42,159 --> 00:02:45,159
+want to change it to
+main, I will type main.
+
+36
+00:02:45,819 --> 00:02:51,449
+If you want to change it to trunk, you
+can type here trunk, but let's stick to main.
+
+37
+00:02:57,780 --> 00:03:01,310
+So now it has changed the
+default branch name to main,
+
+38
+00:03:01,310 --> 00:03:06,500
+but this is for the next time. So
+next time, whenever you do git init,
+
+39
+00:03:06,500 --> 00:03:11,159
+it will change it to, it will
+initialize it with main, but for now,
+
+40
+00:03:11,159 --> 00:03:13,150
+it has already initialized with master.
+
+41
+00:03:14,330 --> 00:03:19,860
+So one thing we can do is in order to
+change this branch, we can run a command.
+
+42
+00:03:20,580 --> 00:03:24,870
+So Git already tells us that you can
+run this command, git branch minus m,
+
+43
+00:03:24,870 --> 00:03:27,150
+and it will change the
+default branch name.
+
+44
+00:03:28,270 --> 00:03:36,099
+So let's run this command, git branch
+minus m, and I want to change it to main,
+
+45
+00:03:36,099 --> 00:03:42,550
+so I will just type main, and
+now, now if I do git status,
+
+46
+00:03:42,550 --> 00:03:47,620
+it tells you on branch
+main, there are no commits yet.
+
+47
+00:03:49,060 --> 00:03:51,000
+But yeah, the branch name is main.
+
+48
+00:03:51,810 --> 00:03:55,509
+How else you can tell that
+you have... This is a Git repo.
+
+49
+00:03:55,889 --> 00:04:00,699
+It's also... You can check
+ls-a, and there is a .git folder,
+
+50
+00:04:00,699 --> 00:04:05,110
+so it's a Git repository, and
+also Git status is working,
+
+51
+00:04:05,110 --> 00:04:08,319
+so you know that the
+depository has been...
+
+52
+00:04:08,939 --> 00:04:10,159
+Initialize properly.
+
+53
+00:04:11,849 --> 00:04:16,870
+Now we already have the Git
+repository. Let's add some more files.
+
+54
+00:04:18,329 --> 00:04:21,629
+Let's add file1.txt.
+
+55
+00:04:24,660 --> 00:04:27,680
+This is commit demo1.
+
+56
+00:04:30,860 --> 00:04:31,680
+Demo file 1.
+
+57
+00:04:33,600 --> 00:04:35,899
+Let's add two more files.
+
+58
+00:04:37,779 --> 00:04:45,310
+File 2.txt, file 3.txt, and
+I will just... This is...
+
+59
+00:04:46,610 --> 00:04:49,509
+Commit demo file 2.
+
+60
+00:04:50,329 --> 00:04:55,740
+Let's copy, and in the file 3,
+so I've created three new files.
+
+61
+00:04:59,699 --> 00:05:04,990
+Now if I do git status, it is
+showing me three untracked files.
+
+62
+00:05:08,610 --> 00:05:13,529
+Now, in order to commit it, I first
+need to add them to my staging area.
+
+63
+00:05:14,310 --> 00:05:16,129
+So let's add git add.
+
+64
+00:05:17,050 --> 00:05:19,850
+Let's say I just want to
+add file one and file two.
+
+65
+00:05:20,149 --> 00:05:24,819
+So just copy the name
+file one and file two.
+
+66
+00:05:25,319 --> 00:05:25,639
+If I...
+
+67
+00:05:27,519 --> 00:05:28,579
+Add it here.
+
+68
+00:05:29,079 --> 00:05:31,779
+So now if we check git status.
+
+69
+00:05:32,439 --> 00:05:35,990
+So in the git status, we have
+two files in the staging area.
+
+70
+00:05:36,269 --> 00:05:38,829
+So these are changes to be committed.
+
+71
+00:05:40,930 --> 00:05:46,040
+If you also want to add
+file 3, do git add file3.txt.
+
+72
+00:05:50,819 --> 00:05:57,889
+And now if we do git status, we have
+three files which are staged to be committed.
+
+73
+00:05:58,949 --> 00:06:02,649
+In order to commit it, we
+need to run the commit command,
+
+74
+00:06:02,649 --> 00:06:04,500
+which is git commit minus m.
+
+75
+00:06:06,350 --> 00:06:11,470
+Commit demo, and yeah.
+
+76
+00:06:12,470 --> 00:06:17,269
+So now the files, now the commit
+is there, so we have made a commit.
+
+77
+00:06:19,189 --> 00:06:22,939
+Here, let's see how we
+can do these things,
+
+78
+00:06:22,939 --> 00:06:28,350
+how we can commit and add files
+using VS Code graphical user interface.
+
+79
+00:06:29,329 --> 00:06:35,079
+So let's say I want to
+change some files. So let's say,
+
+80
+00:06:35,079 --> 00:06:37,019
+let's change the text of file1.ext.
+
+81
+00:06:39,980 --> 00:06:42,449
+This is using VS code.
+
+82
+00:06:48,379 --> 00:06:53,370
+So now in this source control
+tab, just click on source control,
+
+83
+00:06:53,370 --> 00:06:59,060
+and this will tell you that these
+are the changes. If you click on it,
+
+84
+00:06:59,060 --> 00:07:00,720
+you will see what changes are there.
+
+85
+00:07:01,500 --> 00:07:06,110
+And if you need to add it to the
+staging area, just click on plus icon.
+
+86
+00:07:07,009 --> 00:07:13,480
+This will add the changes into the
+staged area. It's very simple using VS code.
+
+87
+00:07:13,680 --> 00:07:19,420
+So you can also Instead of command line,
+you can use Visual Studio Code interface.
+
+88
+00:07:19,819 --> 00:07:23,519
+In order to unstage, you can
+also use the minus sign here,
+
+89
+00:07:23,519 --> 00:07:25,370
+so it will unstage the changes.
+
+90
+00:07:29,569 --> 00:07:39,100
+Let me also make some more changes
+using VS Code, and here also using VS Code.
+
+91
+00:07:42,449 --> 00:07:44,779
+Let's go to the source control tab again.
+
+92
+00:07:45,540 --> 00:07:49,959
+And you can also add
+all the changes together,
+
+93
+00:07:49,959 --> 00:07:57,220
+like using this plus icon in front of
+the changes. So if you click on plus,
+
+94
+00:07:57,220 --> 00:07:58,870
+it says stage all changes.
+
+95
+00:07:59,910 --> 00:08:03,110
+So if you click on plus, this
+will stage all the changes.
+
+96
+00:08:04,110 --> 00:08:07,990
+If you want to verify, you
+can verify using its status,
+
+97
+00:08:07,990 --> 00:08:11,160
+and all the changes are
+there to be committed.
+
+98
+00:08:12,980 --> 00:08:19,100
+In order to unstage, unstage all
+changes, click on Minus, and then Get Status.
+
+99
+00:08:20,579 --> 00:08:22,079
+The changes are unstaged.
+
+100
+00:08:24,089 --> 00:08:28,410
+Let's add all of them and
+make a commit using VS Code.
+
+101
+00:08:29,129 --> 00:08:31,269
+So first, stage all the changes.
+
+102
+00:08:33,990 --> 00:08:37,529
+Commit using VS code.
+
+103
+00:08:40,100 --> 00:08:45,000
+So now it's, just click
+on commit and that's done.
+
+104
+00:08:45,519 --> 00:08:49,289
+Now if I do get status, yeah.
+
+105
+00:08:51,929 --> 00:08:59,169
+We can see if the, Commit is made
+or not. So we have the commit here.
+
+106
+00:08:59,309 --> 00:09:05,309
+So we will talk about git log command in
+the next section only. So with git log,
+
+107
+00:09:05,309 --> 00:09:06,600
+you can view your commit.
+
+108
+00:09:07,039 --> 00:09:10,279
+So we can see all the
+commits that we made are here.
+
+109
+00:09:11,039 --> 00:09:17,159
+So this is how you can Make add
+changes to your staging area, make a commit,
+
+110
+00:09:17,159 --> 00:09:21,279
+and also do the same using VS
+Code graphical user interface.

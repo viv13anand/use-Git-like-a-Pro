@@ -1,0 +1,371 @@
+1
+00:00:06,639 --> 00:00:09,470
+We have already seen these
+commands in the previous section,
+
+2
+00:00:09,470 --> 00:00:13,630
+but let's dive deeper into
+it. So what is git pull doing?
+
+3
+00:00:14,669 --> 00:00:18,059
+So whenever we want to
+integrate remote repository
+
+4
+00:00:18,059 --> 00:00:21,879
+changes to the working
+directory, we use git pull.
+
+5
+00:00:23,039 --> 00:00:26,739
+Just to recap, your working
+directory is where you are making changes.
+
+6
+00:00:26,859 --> 00:00:30,359
+So this is your coding
+editor. This is your VS code.
+
+7
+00:00:31,359 --> 00:00:33,020
+Now on the GitHub repository,
+
+8
+00:00:33,020 --> 00:00:38,000
+if there are more changes and you want
+to integrate it to your local computer,
+
+9
+00:00:38,000 --> 00:00:43,310
+then you will do Git pull and it will
+bring the changes to your working directory.
+
+10
+00:00:44,329 --> 00:00:45,950
+Another command is git fetch.
+
+11
+00:00:46,429 --> 00:00:53,399
+What git fetch does is that it only
+copies the .git folder to your local repository,
+
+12
+00:00:53,399 --> 00:00:57,750
+which means that now git
+knows that there are changes,
+
+13
+00:00:57,750 --> 00:01:02,100
+but the changes are not made
+to your working directory.
+
+14
+00:01:02,320 --> 00:01:05,189
+It doesn't come into your VS code.
+
+15
+00:01:08,560 --> 00:01:11,849
+So git fetch will download the
+changes from GitHub remote repository,
+
+16
+00:01:11,849 --> 00:01:15,129
+but you will not see those
+changes in your working directory.
+
+17
+00:01:16,189 --> 00:01:19,040
+Fetch will allow you to
+review the changes before
+
+18
+00:01:19,040 --> 00:01:21,569
+you actually merge it in
+your working directory.
+
+19
+00:01:23,750 --> 00:01:26,099
+Let's practice git fetch and git pull.
+
+20
+00:01:27,120 --> 00:01:31,040
+Let's go to our git
+video course repository.
+
+21
+00:01:32,299 --> 00:01:33,459
+CD, git.
+
+22
+00:01:38,659 --> 00:01:40,519
+CD get video course.
+
+23
+00:01:44,299 --> 00:01:52,629
+Let's open it in our editor and
+let's change some text in the file one.
+
+24
+00:01:52,670 --> 00:01:57,950
+These are my changes for
+get fetch and get pull.
+
+25
+00:01:59,829 --> 00:02:02,489
+Let's delete some files this time.
+
+26
+00:02:04,590 --> 00:02:08,469
+Yeah, I think one and two would be
+good. Let's delete file three as well.
+
+27
+00:02:08,490 --> 00:02:13,699
+So practice git pull and git fetch.
+
+28
+00:02:21,400 --> 00:02:35,879
+Yeah, let's git add, and then git
+commit, fetch and pull demo, and let's push.
+
+29
+00:02:42,069 --> 00:02:44,699
+In this repository git video course,
+
+30
+00:02:44,699 --> 00:02:48,210
+let's make some changes
+directly into this repo.
+
+31
+00:02:51,069 --> 00:02:56,569
+So let's say, let's add a
+file. Let's refresh, yeah.
+
+32
+00:02:56,610 --> 00:03:05,219
+So now we don't have file
+three and file four, but let's,
+
+33
+00:03:05,219 --> 00:03:10,250
+let's make the changes in file one.
+
+34
+00:03:10,270 --> 00:03:14,349
+Added from remote.
+
+35
+00:03:22,330 --> 00:03:24,069
+So let's commit this.
+
+36
+00:03:24,849 --> 00:03:26,889
+I updated file1.ext.
+
+37
+00:03:28,169 --> 00:03:32,409
+Now if I do git pull, so
+right now in the file1,
+
+38
+00:03:32,409 --> 00:03:36,300
+I have these other changes
+for git fetch and git pull.
+
+39
+00:03:36,900 --> 00:03:42,659
+But now if I do git pull, it
+will change the text of file1.
+
+40
+00:03:45,270 --> 00:03:48,129
+And because it merged the
+changes from the remote to the local.
+
+41
+00:03:48,849 --> 00:03:51,349
+Now let's see what
+happens when we do git fetch.
+
+42
+00:03:52,449 --> 00:03:54,680
+Let's make another commit.
+
+43
+00:03:54,849 --> 00:03:57,840
+Let's change file to text this time.
+
+44
+00:04:02,180 --> 00:04:06,460
+Remote changed file to text.
+
+45
+00:04:10,599 --> 00:04:12,020
+Let's commit the changes.
+
+46
+00:04:13,539 --> 00:04:17,889
+And this time, I'm going to do
+git fetch instead of git pull.
+
+47
+00:04:19,069 --> 00:04:20,589
+I'll git fetch.
+
+48
+00:04:23,290 --> 00:04:29,040
+So git fetch brought the changes, but
+the text of file two, it's still the same.
+
+49
+00:04:29,100 --> 00:04:30,800
+Practice git pull and git fetch.
+
+50
+00:04:33,860 --> 00:04:34,259
+So what...
+
+51
+00:04:36,040 --> 00:04:41,009
+From if I do git status, it tells me
+that you are behind because there is one
+
+52
+00:04:41,009 --> 00:04:45,110
+change which is in the remote, but
+it is not in your working directory.
+
+53
+00:04:46,930 --> 00:04:51,500
+So what git fetch did was
+that it copied the .git folder
+
+54
+00:04:51,500 --> 00:04:55,310
+so that my git is aware
+that there are changes,
+
+55
+00:04:55,310 --> 00:04:59,120
+but the changes are not
+merged in my working directory.
+
+56
+00:05:00,750 --> 00:05:04,889
+What is the benefit of git
+fetch is that sometimes you want to
+
+57
+00:05:04,889 --> 00:05:08,389
+review what changes are there
+before you want to merge it.
+
+58
+00:05:08,850 --> 00:05:11,959
+Basically you want to know
+what were the changes, right?
+
+59
+00:05:12,540 --> 00:05:15,939
+So what we can do is
+we can check git diff.
+
+60
+00:05:17,879 --> 00:05:20,379
+Main and origin main.
+
+61
+00:05:21,339 --> 00:05:25,100
+Origin main is your
+remote repository main branch.
+
+62
+00:05:25,920 --> 00:05:27,250
+And this is my local branch.
+
+63
+00:05:27,490 --> 00:05:30,379
+So I want to know what
+is the difference between
+
+64
+00:05:30,379 --> 00:05:32,410
+the main and the remote main branch.
+
+65
+00:05:33,250 --> 00:05:37,949
+So now it says that file
+to text has been changed.
+
+66
+00:05:38,639 --> 00:05:44,000
+So From the remote, it's
+remote change the file to text,
+
+67
+00:05:44,000 --> 00:05:47,019
+but you have practice
+get pull and get fetch.
+
+68
+00:05:47,620 --> 00:05:51,610
+So with the green, it tells you
+that which are the incoming changes,
+
+69
+00:05:51,610 --> 00:05:54,990
+like which are the changes
+that were coming from the remote.
+
+70
+00:05:55,670 --> 00:06:01,050
+And the red ones are the changes which
+you have made in your local repository,
+
+71
+00:06:01,050 --> 00:06:05,350
+like which are the changes which
+currently exist in your local repository.
+
+72
+00:06:06,089 --> 00:06:09,699
+So these are the new changes
+which are added into the remote.
+
+73
+00:06:10,459 --> 00:06:15,750
+Now, if you are okay with these
+changes and you want to include it,
+
+74
+00:06:15,750 --> 00:06:20,670
+so you can do git merge, and
+you will have the changes here.
+
+75
+00:06:21,269 --> 00:06:23,730
+Sorry, file to remote
+change, file to text.
+
+76
+00:06:25,410 --> 00:06:29,000
+So that is the basic difference
+between git pull and git fetch.
+
+77
+00:06:29,480 --> 00:06:33,180
+Git pull will pull the changes
+directly to your working directory.
+
+78
+00:06:33,839 --> 00:06:39,509
+Git fetch will only copy the .git
+folder, and once you hit git merge,
+
+79
+00:06:39,509 --> 00:06:43,970
+then you will be seeing those
+changes in your local repository.

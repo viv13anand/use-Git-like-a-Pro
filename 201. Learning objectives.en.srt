@@ -1,0 +1,52 @@
+1
+00:00:06,660 --> 00:00:08,439
+Welcome to lesson two, working with Git.
+
+2
+00:00:09,019 --> 00:00:12,240
+In this lesson, we dive deeper
+into the practical use of Git.
+
+3
+00:00:12,900 --> 00:00:16,539
+We are going to focus on some
+basic Git commands and learn
+
+4
+00:00:16,539 --> 00:00:19,870
+to use them from both
+command line and through VS Code.
+
+5
+00:00:20,670 --> 00:00:24,070
+We start off by
+understanding Git usage and workflow.
+
+6
+00:00:24,890 --> 00:00:28,980
+We explore how to add and
+commit changes to a Git repository.
+
+7
+00:00:29,640 --> 00:00:33,799
+You are introduced to the Git
+log, Git fetch, Git pull commands.
+
+8
+00:00:34,560 --> 00:00:37,030
+Additionally, we look into Git aliases,
+
+9
+00:00:37,030 --> 00:00:41,140
+which help you to create
+shortcuts for frequently used commands.
+
+10
+00:00:42,100 --> 00:00:46,130
+Finally, we recap what we have
+learned and run through an exercise.
+
+11
+00:00:46,850 --> 00:00:49,450
+Well, that's the plan for
+this lesson. Let's get started.

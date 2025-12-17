@@ -1,0 +1,712 @@
+1
+00:00:06,820 --> 00:00:09,900
+So in Git, there are four
+areas where your code lives.
+
+2
+00:00:10,539 --> 00:00:13,000
+The first one is your
+local working directory.
+
+3
+00:00:13,619 --> 00:00:16,620
+This is the place where you
+make changes to your files.
+
+4
+00:00:17,440 --> 00:00:21,300
+So this is your coding editor, like
+VS Code or whichever you are using.
+
+5
+00:00:22,399 --> 00:00:24,179
+Second place is the staging area.
+
+6
+00:00:24,899 --> 00:00:28,660
+This is a special area where
+you keep your finalized changes.
+
+7
+00:00:29,339 --> 00:00:32,539
+So you basically tell Git
+that these are the finalized
+
+8
+00:00:32,539 --> 00:00:34,770
+changes which are ready to be committed.
+
+9
+00:00:36,229 --> 00:00:38,450
+Third area is local repository.
+
+10
+00:00:39,049 --> 00:00:41,729
+So this is the place
+in your local computer.
+
+11
+00:00:41,929 --> 00:00:45,399
+This is your local .git
+folder in your project.
+
+12
+00:00:46,640 --> 00:00:48,740
+And the last one is the remote repository.
+
+13
+00:00:48,920 --> 00:00:53,009
+So this is the .git folder in the
+remote server, which is the GitHub.
+
+14
+00:00:54,340 --> 00:00:57,140
+So talking about how
+the workflow looks like.
+
+15
+00:00:57,479 --> 00:01:01,049
+So whenever you are
+starting with any project,
+
+16
+00:01:01,049 --> 00:01:04,189
+you would basically
+cloning a remote repository.
+
+17
+00:01:04,939 --> 00:01:07,209
+You would use the git clone command,
+
+18
+00:01:07,209 --> 00:01:10,450
+and that will download that
+repository to your local machine.
+
+19
+00:01:12,170 --> 00:01:15,709
+After that, you will start to
+make changes in your files.
+
+20
+00:01:16,379 --> 00:01:21,319
+And once you are working on it,
+making changes, and you want to commit it,
+
+21
+00:01:21,319 --> 00:01:23,299
+you would be doing git add.
+
+22
+00:01:23,980 --> 00:01:28,319
+Add them to the staging areas, all the
+changes which you have made to the files.
+
+23
+00:01:29,159 --> 00:01:32,560
+And then you would be
+committing it to your local repository.
+
+24
+00:01:33,640 --> 00:01:38,930
+So all the changes in the staging area
+will go to the local repository after commit.
+
+25
+00:01:39,689 --> 00:01:41,709
+You will run git commit command,
+
+26
+00:01:41,709 --> 00:01:45,090
+and it will commit the
+changes to the local repository.
+
+27
+00:01:46,250 --> 00:01:48,950
+But right now, it's only
+on your local machine.
+
+28
+00:01:49,629 --> 00:01:52,840
+In order to push it, push
+your changes to the remote,
+
+29
+00:01:52,840 --> 00:01:54,879
+you will use the kit push command.
+
+30
+00:01:56,290 --> 00:01:59,090
+Sometimes you also need to
+integrate your teammates work.
+
+31
+00:01:59,329 --> 00:02:01,769
+Let's say your teammate
+is also working on the
+
+32
+00:02:01,769 --> 00:02:04,200
+same project and he or
+she has some changes.
+
+33
+00:02:04,959 --> 00:02:08,120
+Now you also want to
+integrate his or her changes.
+
+34
+00:02:08,620 --> 00:02:12,280
+So you can use get pull
+command and that will bring
+
+35
+00:02:12,280 --> 00:02:16,330
+all the changes which
+are made to the repository
+
+36
+00:02:16,330 --> 00:02:19,460
+by your peers or your
+coworkers that will be
+
+37
+00:02:19,460 --> 00:02:21,550
+integrated to your
+local working directory.
+
+38
+00:02:23,310 --> 00:02:27,219
+Instead of pull, you can
+also use git fetch command.
+
+39
+00:02:27,939 --> 00:02:30,419
+It is a little bit
+different than git pull command.
+
+40
+00:02:30,539 --> 00:02:33,039
+We will talk about it in
+the later section as well.
+
+41
+00:02:33,560 --> 00:02:36,199
+But basically, if you are using git fetch,
+
+42
+00:02:36,199 --> 00:02:40,150
+what git fetch will do is
+that it will copy the .git
+
+43
+00:02:40,150 --> 00:02:42,789
+folder from remote repo
+to your local repository.
+
+44
+00:02:43,729 --> 00:02:47,599
+But the changes will not
+come to your working directory.
+
+45
+00:02:48,479 --> 00:02:52,520
+Which means that Git will be
+aware that there are some changes,
+
+46
+00:02:52,520 --> 00:02:56,219
+but if you want to integrate
+it to your working directory,
+
+47
+00:02:56,219 --> 00:02:58,569
+you need to run git merge command.
+
+48
+00:02:59,469 --> 00:03:04,599
+So git pull is a shortcut. It's like git
+pull is equal to git fetch plus git merge.
+
+49
+00:03:06,139 --> 00:03:09,310
+Let's practice this
+workflow and see how this looks.
+
+50
+00:03:10,490 --> 00:03:16,180
+So we already have a repository like Git
+Video Course. I'm just going to clone it.
+
+51
+00:03:17,599 --> 00:03:21,219
+So just copy it and let's say git clone.
+
+52
+00:03:24,370 --> 00:03:25,849
+Now I've cloned the repository.
+
+53
+00:03:26,229 --> 00:03:29,150
+I can go to get video course folder.
+
+54
+00:03:31,719 --> 00:03:33,879
+And open it in my coding editor.
+
+55
+00:03:35,080 --> 00:03:37,509
+So there are already some files here.
+
+56
+00:03:38,530 --> 00:03:41,449
+I can just change some
+text in the file one.
+
+57
+00:03:42,210 --> 00:03:43,189
+So this is my...
+
+58
+00:03:49,180 --> 00:03:51,819
+Changes for git workflow.
+
+59
+00:03:55,110 --> 00:03:59,900
+Let's create another
+file as well, file2.txt.
+
+60
+00:04:01,840 --> 00:04:06,319
+Practice git workflow.
+
+61
+00:04:12,669 --> 00:04:16,290
+Now, if you want to see what
+all changes you have made,
+
+62
+00:04:16,290 --> 00:04:18,399
+you can also run the status command,
+
+63
+00:04:18,399 --> 00:04:22,319
+and you can see the git
+tells you that you have one file
+
+64
+00:04:22,319 --> 00:04:26,850
+which is modified and another file
+which is a new file, which is file two.
+
+65
+00:04:28,649 --> 00:04:31,800
+We can also see the changes
+from the Visual Studio Code.
+
+66
+00:04:31,839 --> 00:04:38,680
+So if you just Go to
+the source control. Yeah.
+
+67
+00:04:38,920 --> 00:04:43,379
+So in the source control tab, just
+click on the source control. And here,
+
+68
+00:04:43,379 --> 00:04:48,189
+if you just click on any of the
+file, it will show you your changes.
+
+69
+00:04:48,639 --> 00:04:51,060
+So these are the changes which I made,
+
+70
+00:04:51,060 --> 00:04:54,370
+and these were the changes
+which were already in the remote.
+
+71
+00:04:56,819 --> 00:04:59,500
+And in the file too, we
+have all new changes.
+
+72
+00:04:59,550 --> 00:05:02,329
+So it tells you that
+you have added this file.
+
+73
+00:05:02,350 --> 00:05:06,060
+So the green ones are the
+changes which you added and the red
+
+74
+00:05:06,060 --> 00:05:08,920
+ones are the changes which
+were already there from the,
+
+75
+00:05:08,920 --> 00:05:10,629
+which are coming from the remote.
+
+76
+00:05:12,889 --> 00:05:14,810
+Okay. So now we have made the changes.
+
+77
+00:05:16,639 --> 00:05:18,670
+Now we can use git add command.
+
+78
+00:05:19,589 --> 00:05:24,430
+And what git add command does is that it
+adds your changes to the staging area.
+
+79
+00:05:25,600 --> 00:05:29,639
+Now you can add all the
+files to the staging area,
+
+80
+00:05:29,639 --> 00:05:33,670
+but you can also select some
+files for the staging area.
+
+81
+00:05:34,370 --> 00:05:38,680
+So let's say I only want to add
+file1.txt in the staging area.
+
+82
+00:05:39,259 --> 00:05:44,300
+So I can do git add and file1.txt,
+
+83
+00:05:44,300 --> 00:05:51,230
+and that will only add my
+file1.txt into the staging area.
+
+84
+00:05:52,350 --> 00:05:57,980
+So this means that when I do git
+commit, only file1.txt will be committed.
+
+85
+00:05:58,779 --> 00:06:03,220
+The file2.ext will not be
+committed because it is not staged.
+
+86
+00:06:03,819 --> 00:06:08,360
+So all the changes that you want
+to commit to your local repository,
+
+87
+00:06:08,360 --> 00:06:11,860
+you first need to add
+them to the staging area.
+
+88
+00:06:12,660 --> 00:06:17,990
+This staging area is really helpful. For
+example, you're working on a big feature,
+
+89
+00:06:17,990 --> 00:06:23,529
+you made a lot of changes, but you want
+to break those changes in smaller commits.
+
+90
+00:06:24,240 --> 00:06:28,180
+So it's possible that you
+say that only a certain number
+
+91
+00:06:28,180 --> 00:06:31,399
+of changes are the changes
+for the particular commit.
+
+92
+00:06:31,800 --> 00:06:35,550
+The rest of the changes are maybe
+some drafts or they are not finalized.
+
+93
+00:06:36,209 --> 00:06:40,689
+So this staging area is really helpful
+when you are working with a lot of files.
+
+94
+00:06:42,990 --> 00:06:52,040
+So let's now commit it. For
+committing, we can use git commit minus m.
+
+95
+00:06:52,040 --> 00:07:00,019
+Minus m is for the message, and
+here we can write staging area demo.
+
+96
+00:07:03,410 --> 00:07:07,750
+Now we have committed, and
+if we run git status command,
+
+97
+00:07:07,750 --> 00:07:15,019
+so you can see that this file was not
+sent to your commit. Now if I do git push,
+
+98
+00:07:15,019 --> 00:07:17,639
+it will push the changes
+to the remote repository,
+
+99
+00:07:17,639 --> 00:07:19,959
+but it will not include the file 2.txt.
+
+100
+00:07:25,740 --> 00:07:28,850
+Now next thing is, let's push our changes.
+
+101
+00:07:32,310 --> 00:07:37,339
+Let's also push the
+another file. So get status,
+
+102
+00:07:37,339 --> 00:07:40,569
+right now we have file
+two, which is not added.
+
+103
+00:07:41,110 --> 00:07:42,350
+So let's also add it.
+
+104
+00:07:43,980 --> 00:07:48,459
+You can also add multiple files
+together, and if you want to add all the files,
+
+105
+00:07:48,459 --> 00:07:50,139
+then you can use simply dot.
+
+106
+00:07:51,230 --> 00:07:55,930
+So if I had like more files,
+file 3, 4, 5, if I did git add dot,
+
+107
+00:07:55,930 --> 00:07:58,699
+it will add all the
+files to the staging area.
+
+108
+00:08:00,500 --> 00:08:03,800
+So let's add that and also do git commit.
+
+109
+00:08:05,500 --> 00:08:07,689
+Minus M, more changes.
+
+110
+00:08:09,990 --> 00:08:16,759
+And now I have two commits, so I
+will just push these changes. Okay.
+
+111
+00:08:18,850 --> 00:08:20,290
+Now we can check.
+
+112
+00:08:22,879 --> 00:08:28,310
+On our remote repository, so the file
+one, these are my changes from Git workflow,
+
+113
+00:08:28,310 --> 00:08:32,649
+so I already made changes to the
+files which are reflecting here,
+
+114
+00:08:32,649 --> 00:08:36,279
+and then I also changed
+file to practice Git workflow.
+
+115
+00:08:36,779 --> 00:08:40,240
+So we have the changes which are
+pushed to the remote repository.
+
+116
+00:08:41,460 --> 00:08:45,919
+Now let's say your teammate made
+some changes to this repository.
+
+117
+00:08:46,590 --> 00:08:51,909
+So let's create a file here.
+
+118
+00:08:52,649 --> 00:08:56,129
+Let's call it file3.txt.
+
+119
+00:08:58,070 --> 00:09:00,750
+More changes into the repository.
+
+120
+00:09:04,700 --> 00:09:06,120
+Yeah, just committed.
+
+121
+00:09:09,340 --> 00:09:14,379
+Now there are changes in this
+repository, but in the local repository,
+
+122
+00:09:14,379 --> 00:09:16,889
+the file three does not exist.
+
+123
+00:09:17,629 --> 00:09:19,860
+So let's go back to our local repository.
+
+124
+00:09:20,460 --> 00:09:27,789
+And right now, you can see in the git
+status, Yeah, there is nothing to commit.
+
+125
+00:09:27,830 --> 00:09:33,309
+We have committed all our changes, but
+right now there is no, uh, file three.
+
+126
+00:09:33,809 --> 00:09:36,960
+Right. But on our remote,
+there is file three as well.
+
+127
+00:09:37,559 --> 00:09:39,860
+So we want to
+integrate the remote changes.
+
+128
+00:09:40,440 --> 00:09:45,000
+So for that, we can do get pull.
+
+129
+00:09:47,669 --> 00:09:49,700
+And now we have file three.
+
+130
+00:09:50,320 --> 00:09:56,759
+So this is how you will integrate your
+teammates work in your local computer.
+
+131
+00:09:56,940 --> 00:10:01,190
+So all the new changes which
+are in the remote repository,
+
+132
+00:10:01,190 --> 00:10:06,220
+you can integrate it to your local
+repository by using git pull command.
+
+133
+00:10:08,149 --> 00:10:12,000
+Let's see what would have
+happened if I used git fetch.
+
+134
+00:10:13,960 --> 00:10:26,250
+Let's add a new file,
+file4.txt, testing git fetch.
+
+135
+00:10:29,379 --> 00:10:33,029
+So now instead of git
+pull, I will use git fetch.
+
+136
+00:10:33,990 --> 00:10:35,970
+So here I do git fetch.
+
+137
+00:10:38,669 --> 00:10:43,429
+Now, I used git fetch, but
+there is no file four here.
+
+138
+00:10:44,169 --> 00:10:52,179
+So this file four was not created in my
+local repository, but if you do git status,
+
+139
+00:10:52,179 --> 00:10:58,309
+it says that your branch is
+behind the origin main by one commit.
+
+140
+00:10:59,350 --> 00:11:01,990
+Origin main is the remote repo,
+
+141
+00:11:02,000 --> 00:11:06,409
+so you are behind it
+because there is one commit
+
+142
+00:11:06,409 --> 00:11:09,049
+additional which includes the file for,
+
+143
+00:11:09,049 --> 00:11:13,470
+but my local repository does
+not know anything about it.
+
+144
+00:11:15,259 --> 00:11:20,970
+So if we want to integrate those
+changes, now we can do git merge.
+
+145
+00:11:21,929 --> 00:11:26,269
+If we do git merge, we
+will get the same file for.
+
+146
+00:11:26,570 --> 00:11:30,779
+So we have integrated these
+changes to our local repository.
+
+147
+00:11:31,620 --> 00:11:34,320
+Git pull is a
+shortcut. If you do git pull,
+
+148
+00:11:34,320 --> 00:11:37,500
+you directly pull the changes
+from the remote to your local.
+
+149
+00:11:38,259 --> 00:11:42,080
+If you use git fetch, then
+you can review those changes.
+
+150
+00:11:42,700 --> 00:11:45,480
+If you want to merge it
+to your local repository,
+
+151
+00:11:45,480 --> 00:11:47,700
+you need to additionally
+use git merge command.

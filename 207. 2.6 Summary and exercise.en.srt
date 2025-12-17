@@ -1,0 +1,120 @@
+1
+00:00:06,599 --> 00:00:11,310
+Let's recap what we learned in this
+lesson. So we talked about Git workflow,
+
+2
+00:00:11,310 --> 00:00:17,329
+in which we saw that your code lives in
+four areas throughout the Git workflow,
+
+3
+00:00:17,329 --> 00:00:21,750
+which is your local directory, your
+staging area, your local repository,
+
+4
+00:00:21,750 --> 00:00:23,350
+and your remote repository.
+
+5
+00:00:24,920 --> 00:00:28,980
+Second, we talked about adding and
+committing files to get repository.
+
+6
+00:00:29,320 --> 00:00:33,829
+We also saw how to do
+commit and adding files
+
+7
+00:00:33,829 --> 00:00:36,530
+using VS code graphical user interface.
+
+8
+00:00:37,570 --> 00:00:39,369
+Then we saw some more git commands,
+
+9
+00:00:39,369 --> 00:00:41,929
+which is git log to check
+the history of commits.
+
+10
+00:00:42,229 --> 00:00:45,060
+We also saw git fetch and git pull.
+
+11
+00:00:45,359 --> 00:00:50,380
+We also checked what is the
+difference between git pull and git fetch.
+
+12
+00:00:52,250 --> 00:00:57,020
+Then finally, we saw how
+we can create Git aliases,
+
+13
+00:00:57,020 --> 00:01:01,420
+which can help us running
+those commands faster. Basically,
+
+14
+00:01:01,420 --> 00:01:04,469
+you can configure it in your Git config,
+
+15
+00:01:04,469 --> 00:01:10,569
+or you can also add it to your ZSH
+RC and use aliases for the commands.
+
+16
+00:01:13,379 --> 00:01:15,019
+Moving on to the exercise.
+
+17
+00:01:16,579 --> 00:01:20,329
+So part one is practice all the
+commands that we learned in this lesson.
+
+18
+00:01:20,549 --> 00:01:26,819
+So try git status, git add, git log,
+git commit, git fetch, and git pull.
+
+19
+00:01:28,689 --> 00:01:30,849
+Also, try it using VS Code.
+
+20
+00:01:31,439 --> 00:01:34,530
+Try all the commands.
+Try to see how you can
+
+21
+00:01:34,530 --> 00:01:37,409
+use leverage VS Code to
+run all these things.
+
+22
+00:01:38,629 --> 00:01:41,129
+Part two is add
+aliases for these commands.
+
+23
+00:01:41,430 --> 00:01:45,090
+I would highly encourage
+you to add the aliases and
+
+24
+00:01:45,090 --> 00:01:48,379
+use aliases because when
+you are working every day,
+
+25
+00:01:48,379 --> 00:01:50,209
+the aliases are really helpful.
+
+26
+00:01:50,989 --> 00:01:52,870
+Thank you and see you in the next lesson.

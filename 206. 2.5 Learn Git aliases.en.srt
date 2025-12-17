@@ -1,0 +1,359 @@
+1
+00:00:06,759 --> 00:00:09,869
+In Git, we are basically
+dealing with a lot of commands,
+
+2
+00:00:09,869 --> 00:00:12,130
+and some of these
+commands are really long.
+
+3
+00:00:13,029 --> 00:00:16,750
+So what we can do is that
+we can set up aliases for
+
+4
+00:00:16,750 --> 00:00:19,899
+those long commands so
+that it's easy for us to use.
+
+5
+00:00:20,500 --> 00:00:21,739
+Let's see how we can do it.
+
+6
+00:00:22,539 --> 00:00:26,199
+The first way I'm going to
+show you is using the git config.
+
+7
+00:00:26,750 --> 00:00:30,850
+So we would be adding aliases for
+the commands in the git config.
+
+8
+00:00:32,149 --> 00:00:33,229
+Let's see how to do this.
+
+9
+00:00:33,850 --> 00:00:42,909
+So let's open our Code.getconfig.
+
+10
+00:00:43,469 --> 00:00:48,259
+Let's open our config
+file. And here I want to,
+
+11
+00:00:48,259 --> 00:00:53,060
+there are already some aliases
+existing. Okay, so basically,
+
+12
+00:00:53,060 --> 00:00:56,439
+you can add s for status.
+
+13
+00:00:57,359 --> 00:00:59,020
+Let's say I want to add
+
+14
+00:01:00,780 --> 00:01:13,709
+PP for push, or just P
+for push, or actually pull.
+
+15
+00:01:15,590 --> 00:01:21,090
+So let's say P for pull,
+S for status, L for log.
+
+16
+00:01:22,230 --> 00:01:26,939
+So instead of using
+now the whole commands,
+
+17
+00:01:26,939 --> 00:01:31,049
+I can use this abbreviations like aliases.
+
+18
+00:01:32,450 --> 00:01:37,620
+So if I just go, and here I
+use, instead of git status,
+
+19
+00:01:37,620 --> 00:01:42,400
+so this tells me the
+status, but I can use git s,
+
+20
+00:01:42,400 --> 00:01:45,180
+and that will execute the same command.
+
+21
+00:01:46,329 --> 00:01:52,670
+If I want to do the log, then I can do
+git l, and this will tell me the log.
+
+22
+00:01:52,870 --> 00:01:56,140
+So this is git log hyphen hyphen one line.
+
+23
+00:01:56,540 --> 00:01:57,040
+So we have...
+
+24
+00:01:58,379 --> 00:02:02,939
+Change this command, created alias,
+and it's simply we can write git l.
+
+25
+00:02:02,939 --> 00:02:06,450
+Similar for the git add, you can do git a,
+
+26
+00:02:06,450 --> 00:02:11,020
+and it will nothing to add
+because we don't have any changes here.
+
+27
+00:02:11,620 --> 00:02:13,500
+And for commit, you can also do git add.
+
+28
+00:02:16,000 --> 00:02:22,550
+CI, I have added, you can create any
+alias, like you can also do just C, so get C.
+
+29
+00:02:27,539 --> 00:02:32,360
+This is also good, but there is
+another way, which I'm going to show you.
+
+30
+00:02:32,719 --> 00:02:35,669
+And that is more convenient
+because here we are still
+
+31
+00:02:35,669 --> 00:02:38,330
+writing git and then we
+are writing the commands.
+
+32
+00:02:39,110 --> 00:02:43,490
+So another way to do it
+is by setting up those
+
+33
+00:02:43,490 --> 00:02:46,280
+aliases in your shell, like .zrc file.
+
+34
+00:02:46,780 --> 00:02:51,909
+If you're using bash, then you
+add these aliases in your bash rc.
+
+35
+00:02:52,930 --> 00:02:59,860
+So just copy these aliases, alias GST,
+like I've created GST for Git status,
+
+36
+00:02:59,860 --> 00:03:06,789
+which means that whenever I will use
+GST, it will execute Git status command.
+
+37
+00:03:07,270 --> 00:03:11,629
+Then for Git clone, I can
+use GCL, GA for Git add.
+
+38
+00:03:12,389 --> 00:03:15,680
+You can add a lot many
+aliases as you want.
+
+39
+00:03:15,840 --> 00:03:18,050
+There are a lot more
+available on the internet,
+
+40
+00:03:18,050 --> 00:03:20,750
+but these are the basic
+ones which I use a lot.
+
+41
+00:03:21,250 --> 00:03:24,849
+So you can just copy it and
+add it to your ZSHRC file.
+
+42
+00:03:25,830 --> 00:03:32,560
+I will show you how to do it in your
+ZSHRC. So let's see how to do this.
+
+43
+00:03:33,159 --> 00:03:37,710
+So first, you need to
+open your ZSHRC file.
+
+44
+00:03:38,560 --> 00:03:42,930
+If you are working with bash
+shell, then you will have bash rc.
+
+45
+00:03:44,289 --> 00:03:46,870
+So let's open ZSHRC.
+
+46
+00:03:47,909 --> 00:03:52,159
+So I'm using this theme, power level 9K.
+
+47
+00:03:52,659 --> 00:03:55,840
+So this theme already
+comes with those aliases.
+
+48
+00:03:56,340 --> 00:04:01,530
+So even though I have not added any of
+those aliases, it still works for me.
+
+49
+00:04:03,229 --> 00:04:07,930
+But you can add your
+own, like here, alias, GST.
+
+50
+00:04:12,259 --> 00:04:13,639
+And git status.
+
+51
+00:04:14,840 --> 00:04:20,050
+Let's try. So we have aliases
+set. You can add as much as one.
+
+52
+00:04:21,110 --> 00:04:26,220
+More for git add, git add
+all, or git commit as well.
+
+53
+00:04:28,439 --> 00:04:33,629
+So here, let's try it
+out, and let's run GST,
+
+54
+00:04:33,629 --> 00:04:37,779
+and now it executes
+the git status command.
+
+55
+00:04:39,670 --> 00:04:44,839
+It's really helpful because as you work
+with a lot of commands like git checkout,
+
+56
+00:04:44,839 --> 00:04:50,009
+there will be a lot more commands that
+will be coming in the next sections.
+
+57
+00:04:50,490 --> 00:04:55,029
+If you create aliases, it's
+really fast to work with git.
+
+58
+00:04:56,329 --> 00:05:02,290
+For example, if I have to make any
+commit, I can just do gc-m and my commit message.
+
+59
+00:05:05,790 --> 00:05:11,350
+So right now, there is no file, no
+changes, so there is nothing to be committed,
+
+60
+00:05:11,350 --> 00:05:15,180
+but if you just do any
+change, let's change one file.
+
+61
+00:05:20,680 --> 00:05:26,060
+This is changed.
+
+62
+00:05:29,319 --> 00:05:38,360
+Let's add one more file,
+file3.txt, aliases demo.
+
+63
+00:05:41,279 --> 00:05:46,550
+So now if I need to do all this, all the
+steps like adding, committing, pushing,
+
+64
+00:05:46,550 --> 00:05:49,509
+I can do it with the aliases really fast.
+
+65
+00:05:50,009 --> 00:05:53,490
+Like first I can do GAA,
+which is for git add all.
+
+66
+00:05:54,050 --> 00:05:58,600
+This is something which I have
+created for adding all files. Of course,
+
+67
+00:05:58,600 --> 00:06:00,220
+you can write git add dot.
+
+68
+00:06:01,420 --> 00:06:09,310
+But I just took it, add all, GST, all
+files are added, and then I have to commit,
+
+69
+00:06:09,310 --> 00:06:12,379
+then GC minus M, area says demo.
+
+70
+00:06:14,220 --> 00:06:19,290
+And if I want to check if this
+is committed or not, I do glg,
+
+71
+00:06:19,290 --> 00:06:24,350
+and this tells me that you have a
+commit already made to the local repo.
+
+72
+00:06:25,550 --> 00:06:28,649
+So these are the two ways
+you can create Git aliases.
+
+73
+00:06:29,029 --> 00:06:32,389
+You can either
+configure it in your Git config
+
+74
+00:06:32,389 --> 00:06:36,129
+file, or you can go with
+the ZSHRC, add your...
+
+75
+00:06:36,990 --> 00:06:40,759
+Aliases in the ZSH-RC and work with that.
+
+76
+00:06:41,339 --> 00:06:45,740
+So both are good. I prefer the
+ZSH-RC. You can use whichever you prefer.
