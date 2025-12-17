@@ -1,0 +1,298 @@
+1
+00:00:06,710 --> 00:00:09,070
+Welcome to use Git
+like a pro live lessons.
+
+2
+00:00:09,750 --> 00:00:13,710
+My name is Ashima Ahuja. I have
+over eight years of experience
+
+3
+00:00:13,710 --> 00:00:16,089
+as a front-end engineer
+in the software industry.
+
+4
+00:00:16,980 --> 00:00:20,079
+My career includes
+working with startups like Miro
+
+5
+00:00:20,079 --> 00:00:23,179
+and larger companies such
+as Booking.com and Meta.
+
+6
+00:00:24,070 --> 00:00:28,649
+I enjoy sharing my knowledge through
+online courses, workshops, and public speaking.
+
+7
+00:00:29,410 --> 00:00:32,450
+I have taken several
+trainings and have spoken
+
+8
+00:00:32,450 --> 00:00:34,740
+at various conferences
+aiming to contribute
+
+9
+00:00:34,740 --> 00:00:38,929
+to the tech community and support
+others in their professional growth.
+
+10
+00:00:40,289 --> 00:00:44,070
+The main goal of this
+course is to provide you
+
+11
+00:00:44,070 --> 00:00:46,340
+with a comprehensive understanding of Git,
+
+12
+00:00:46,340 --> 00:00:48,990
+covering everything from
+basics to advanced topics
+
+13
+00:00:48,990 --> 00:00:51,630
+you will need in your day-to-day work.
+
+14
+00:00:52,630 --> 00:00:57,020
+I have pulled together information
+based on industry standards and presented
+
+15
+00:00:57,020 --> 00:01:02,200
+in a way that makes both simple and
+complex concepts easier to grasp.
+
+16
+00:01:03,259 --> 00:01:08,120
+Whether you are new to version control or
+looking to enhance your existing skills,
+
+17
+00:01:08,120 --> 00:01:10,209
+this course is designed for you.
+
+18
+00:01:11,150 --> 00:01:15,510
+It aims to equip you with practical
+knowledge to use Git effectively.
+
+19
+00:01:16,290 --> 00:01:18,859
+You will also learn to
+confidently collaborate
+
+20
+00:01:18,859 --> 00:01:21,060
+with others in your development workflow.
+
+21
+00:01:22,609 --> 00:01:26,450
+The first lesson in this course
+provides an overview of version control.
+
+22
+00:01:27,219 --> 00:01:31,500
+In this module, you gain a solid
+understanding of Git and GitHub,
+
+23
+00:01:31,500 --> 00:01:34,719
+two widely used tools in the
+software development world.
+
+24
+00:01:35,680 --> 00:01:37,819
+We cover the key Git terminologies,
+
+25
+00:01:37,819 --> 00:01:41,739
+learn how to set up and
+install Git on your system,
+
+26
+00:01:41,739 --> 00:01:46,010
+and explore how to push code to
+a remote repository on GitHub.
+
+27
+00:01:47,049 --> 00:01:51,099
+By the end of this lesson, you
+should be able to create, clone,
+
+28
+00:01:51,099 --> 00:01:52,650
+and manage repositories with ease.
+
+29
+00:01:55,109 --> 00:01:59,409
+In the second lesson, we dive
+deeper into the practical use of Git,
+
+30
+00:01:59,409 --> 00:02:01,400
+focusing on its workflow and commands.
+
+31
+00:02:02,180 --> 00:02:04,989
+The goal is to learn how to use Git,
+
+32
+00:02:04,989 --> 00:02:08,419
+both from the command line and
+through the graphical user interface.
+
+33
+00:02:09,280 --> 00:02:13,110
+We explore how to add and
+commit changes to a Git repository.
+
+34
+00:02:13,750 --> 00:02:16,389
+You are introduced to the Git log command,
+
+35
+00:02:16,389 --> 00:02:18,710
+which helps in
+reviewing the previous commits.
+
+36
+00:02:19,610 --> 00:02:24,090
+This module covers how to fetch and
+pull updates from a remote repository.
+
+37
+00:02:24,930 --> 00:02:28,449
+Additionally, we simplify
+your workflow with Git aliases,
+
+38
+00:02:28,449 --> 00:02:32,419
+which help you create shortcuts
+for frequently used commands.
+
+39
+00:02:34,270 --> 00:02:39,110
+Next lesson covers how to create
+perfect commits and write clear
+
+40
+00:02:39,110 --> 00:02:42,199
+commit messages using the
+conventional commits format,
+
+41
+00:02:42,199 --> 00:02:44,400
+ensuring a clean project history.
+
+42
+00:02:45,280 --> 00:02:48,599
+You will learn how to
+amend commits and use the
+
+43
+00:02:48,599 --> 00:02:50,930
+git diff command to
+review changes effectively.
+
+44
+00:02:51,870 --> 00:02:57,669
+After that, we move on to see how to undo
+changes in Git commands like git checkout,
+
+45
+00:02:57,669 --> 00:03:00,050
+git restore, git reset, and git revert.
+
+46
+00:03:00,789 --> 00:03:04,979
+We are going to learn when and
+how to use each of these commands
+
+47
+00:03:04,979 --> 00:03:07,680
+to revert and modify
+changes safely in your project.
+
+48
+00:03:08,500 --> 00:03:12,319
+By the end, you should know how to
+effectively recover from the mistakes.
+
+49
+00:03:13,590 --> 00:03:15,879
+Next, we will explore git branches,
+
+50
+00:03:15,879 --> 00:03:21,229
+understanding how they work and how to
+manage them with commands like git branch.
+
+51
+00:03:22,169 --> 00:03:25,379
+We will also learn how to
+rename and delete branches.
+
+52
+00:03:26,360 --> 00:03:31,259
+This lesson also covers usage of
+tags for versioning and releases,
+
+53
+00:03:31,259 --> 00:03:34,379
+providing tools for more
+organized project management.
+
+54
+00:03:35,599 --> 00:03:39,389
+Finally, we move to the most
+important part of our day-to-day workflow.
+
+55
+00:03:40,030 --> 00:03:42,129
+We dive into merging and rebasing.
+
+56
+00:03:42,770 --> 00:03:45,639
+You are going to learn
+the differences between
+
+57
+00:03:45,639 --> 00:03:47,789
+these two methods of integrating changes,
+
+58
+00:03:47,789 --> 00:03:51,020
+practice them, and discover
+how to create pull requests.
+
+59
+00:03:52,199 --> 00:03:57,819
+And finally, we close the course with
+some advanced Git concepts like stashing,
+
+60
+00:03:57,819 --> 00:04:00,409
+squashing commits,
+performing an interactive rebase,
+
+61
+00:04:00,409 --> 00:04:03,430
+and using reflog to correct our mistakes.
+
+62
+00:04:03,990 --> 00:04:05,849
+Well, that's the basic plan of the course.
+
+63
+00:04:06,120 --> 00:04:10,000
+Thanks again for joining me in this live
+lessons, and I hope you enjoy the course.
