@@ -1,0 +1,77 @@
+1
+00:00:06,690 --> 00:00:09,470
+Welcome to lesson six,
+merging and rebasing in Git.
+
+2
+00:00:10,269 --> 00:00:13,759
+In this lesson, we'll explore
+two fundamental Git concepts
+
+3
+00:00:13,759 --> 00:00:16,859
+that help you integrate
+changes from different branches,
+
+4
+00:00:16,859 --> 00:00:18,800
+which is merging and rebasing.
+
+5
+00:00:19,730 --> 00:00:23,320
+Mastering these tools will
+allow you to handle collaboration
+
+6
+00:00:23,320 --> 00:00:26,120
+and streamline your project
+history more effectively.
+
+7
+00:00:27,010 --> 00:00:30,019
+We'll begin with theory
+and concepts behind merging,
+
+8
+00:00:30,019 --> 00:00:33,409
+followed by hands-on practice
+with merge commands in Git.
+
+9
+00:00:34,350 --> 00:00:36,229
+Then we'll switch to rebase,
+
+10
+00:00:36,229 --> 00:00:40,740
+starting with a deep dive into theory
+and practical application of rebasing.
+
+11
+00:00:41,719 --> 00:00:44,479
+After that, we will
+compare and contrast the two
+
+12
+00:00:44,479 --> 00:00:47,240
+approaches to help you
+decide which one to use.
+
+13
+00:00:47,960 --> 00:00:50,689
+Then we'll learn how to
+create pull requests,
+
+14
+00:00:50,689 --> 00:00:53,420
+an essential part of
+collaboration in Git projects.
+
+15
+00:00:54,240 --> 00:00:57,140
+Finally, we wrap up with a
+summary and an exercise.
+
+16
+00:00:57,780 --> 00:01:00,240
+That's the plan for this
+lesson. Let's get started.

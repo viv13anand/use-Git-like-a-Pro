@@ -1,0 +1,208 @@
+1
+00:00:06,629 --> 00:00:11,439
+To recap what we learned in this
+lesson, so first we talked about merging,
+
+2
+00:00:11,439 --> 00:00:14,880
+how we can merge our
+features into the main branch.
+
+3
+00:00:15,839 --> 00:00:20,070
+Then we talked about how we can
+use rebase to integrate our changes.
+
+4
+00:00:21,070 --> 00:00:25,320
+The benefit we saw with the rebase
+is that there is no merge commit,
+
+5
+00:00:25,320 --> 00:00:29,879
+and we can update our feature branch
+with the latest commits on the main branch.
+
+6
+00:00:31,260 --> 00:00:36,820
+Then we also saw how to handle conflicts
+while merging and also while rebasing.
+
+7
+00:00:37,859 --> 00:00:40,119
+Finally, we talked about pull request.
+
+8
+00:00:40,740 --> 00:00:45,079
+We saw that directly merging
+to master is not a great idea.
+
+9
+00:00:45,500 --> 00:00:49,740
+It can be risky and it doesn't
+give your peers to review your code.
+
+10
+00:00:51,100 --> 00:00:53,020
+So that is why we create pull requests.
+
+11
+00:00:53,479 --> 00:00:57,609
+Pull requests will give a
+chance to your peers to review
+
+12
+00:00:57,609 --> 00:01:00,990
+your code and then
+suggest any feedback you have.
+
+13
+00:01:03,969 --> 00:01:08,769
+Going to the exercise,
+I want you to create
+
+14
+00:01:08,769 --> 00:01:12,510
+a new Git repository
+with name git-workshop,
+
+15
+00:01:12,510 --> 00:01:16,250
+create index.html file
+with content hello world,
+
+16
+00:01:16,250 --> 00:01:19,989
+and push changes to your remote repo.
+
+17
+00:01:21,750 --> 00:01:26,549
+After you are done with creating a
+repo, I want you to practice merging.
+
+18
+00:01:27,450 --> 00:01:33,329
+So create a feature branch with name
+feature merge exercise from master.
+
+19
+00:01:34,049 --> 00:01:38,530
+Edit your index.html file
+with changing text in the body.
+
+20
+00:01:39,000 --> 00:01:44,280
+You can choose to create a new file as
+well. It depends on what you want to do.
+
+21
+00:01:45,000 --> 00:01:50,260
+Make a commit, go to master, this
+time make two commits into the master.
+
+22
+00:01:51,299 --> 00:01:55,500
+Go to the feature branch and
+merge master in your feature branch.
+
+23
+00:01:56,560 --> 00:02:00,599
+Now you should see the master
+commits along with the merge commit.
+
+24
+00:02:02,939 --> 00:02:06,840
+I also want you to practice
+rebase, so this is the next part.
+
+25
+00:02:08,120 --> 00:02:12,800
+For rebase, create a feature
+branch again from the master,
+
+26
+00:02:12,800 --> 00:02:19,349
+edit your index.html file, make a
+commit, go to master, make two commits again,
+
+27
+00:02:20,439 --> 00:02:25,750
+Go to the feature branch, and this
+time use rebase in your feature branch.
+
+28
+00:02:27,229 --> 00:02:30,150
+There should be a difference in
+the history that you should see.
+
+29
+00:02:30,889 --> 00:02:33,719
+Your commits would be
+on top of the master,
+
+30
+00:02:33,719 --> 00:02:36,240
+and there would be no
+additional merge commit.
+
+31
+00:02:37,129 --> 00:02:39,840
+Finally, also practice pull requests.
+
+32
+00:02:40,939 --> 00:02:43,909
+With the pull request,
+part one is that you create
+
+33
+00:02:43,909 --> 00:02:46,280
+a bug fix branch from the master branch.
+
+34
+00:02:47,430 --> 00:02:51,789
+Change the text in index.html to
+hello world from your country.
+
+35
+00:02:52,590 --> 00:02:54,500
+Push your branch to remote,
+
+36
+00:02:54,500 --> 00:02:59,090
+and this time merge the branch
+to master using the pull request.
+
+37
+00:03:00,460 --> 00:03:04,500
+Verify the changes in master
+branch and use git pull to see
+
+38
+00:03:04,500 --> 00:03:07,860
+if the changes have been
+updated in your local repository.
+
+39
+00:03:11,789 --> 00:03:15,800
+As a part two, create
+another branch from master,
+
+40
+00:03:15,800 --> 00:03:19,360
+change the text again,
+and commit your changes.
+
+41
+00:03:20,500 --> 00:03:23,740
+Go back to the master
+and change the text again.
+
+42
+00:03:25,259 --> 00:03:28,990
+Now go to your feature branch
+and push your branch to remote.
+
+43
+00:03:29,870 --> 00:03:34,689
+Create a pull request. Now this time you
+should see some conflicts while merging.

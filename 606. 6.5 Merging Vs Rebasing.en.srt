@@ -1,0 +1,219 @@
+1
+00:00:06,710 --> 00:00:09,890
+Let's recap the differences
+between merging and rebase.
+
+2
+00:00:10,570 --> 00:00:15,099
+So we saw that with merging,
+it's going to be a three-way merge,
+
+3
+00:00:15,099 --> 00:00:18,929
+which means Git is going to
+create an additional merge commit.
+
+4
+00:00:20,190 --> 00:00:24,269
+However, with rebasing,
+no merge commit is created
+
+5
+00:00:24,269 --> 00:00:27,339
+because it's always a fast-forward merge.
+
+6
+00:00:28,260 --> 00:00:30,699
+Now, whether to use merge or rebase,
+
+7
+00:00:30,699 --> 00:00:33,840
+it depends on your
+personal preference or also on
+
+8
+00:00:33,840 --> 00:00:37,320
+what you have decided as
+a team in your project.
+
+9
+00:00:38,679 --> 00:00:42,649
+Some people like to see the
+cleaner history, so they prefer rebase.
+
+10
+00:00:43,210 --> 00:00:49,149
+However, there are different benefits of
+using merge, so some people prefer merging.
+
+11
+00:00:50,070 --> 00:00:54,960
+The major benefit of rebasing is that
+you get a much cleaner project history.
+
+12
+00:00:55,799 --> 00:00:59,380
+There are no unnecessary merge
+commits required by git merge.
+
+13
+00:01:01,350 --> 00:01:05,519
+So git rebase creates a linear
+history which makes it easy to
+
+14
+00:01:05,519 --> 00:01:08,989
+navigate the project with git
+log or git bisect commands.
+
+15
+00:01:09,879 --> 00:01:13,959
+However, there are also some
+pitfalls using git rebase.
+
+16
+00:01:15,519 --> 00:01:18,049
+Since git rebase rewrites the history,
+
+17
+00:01:18,049 --> 00:01:21,859
+it can be dangerous in
+terms of collaboration if
+
+18
+00:01:21,859 --> 00:01:25,239
+you don't follow the
+golden rules of rebasing.
+
+19
+00:01:26,299 --> 00:01:31,989
+The first rule we have is that you
+never use git rebase on public branches,
+
+20
+00:01:31,989 --> 00:01:37,299
+which means you never do git checkout
+master and do git rebase feature branch.
+
+21
+00:01:38,879 --> 00:01:39,579
+Why is that?
+
+22
+00:01:40,079 --> 00:01:43,280
+Because your master branch
+has hundreds of commits,
+
+23
+00:01:43,280 --> 00:01:48,480
+and a lot of other people are
+also working on the master branch.
+
+24
+00:01:49,569 --> 00:01:52,290
+Now, when you do git
+rebase feature branch,
+
+25
+00:01:52,290 --> 00:01:57,040
+what it will do is that it
+will take all the commits of the
+
+26
+00:01:57,040 --> 00:02:00,769
+master branch and put it on
+top of your feature branch.
+
+27
+00:02:02,590 --> 00:02:07,060
+And the problem with that is that
+it only happen in your repository.
+
+28
+00:02:07,920 --> 00:02:11,960
+All the developers who are still
+working on the original main branch,
+
+29
+00:02:11,960 --> 00:02:14,319
+they will have a very different history.
+
+30
+00:02:16,349 --> 00:02:19,210
+Since Rebase results in brand new commits,
+
+31
+00:02:19,210 --> 00:02:22,479
+Git will think that
+your main branch history
+
+32
+00:02:22,479 --> 00:02:24,930
+has diverged from
+everybody else's history.
+
+33
+00:02:26,000 --> 00:02:31,500
+Also, when you try to push the
+master to remote with git push master,
+
+34
+00:02:31,500 --> 00:02:37,400
+git will prevent you from doing so
+because it conflicts with the remote main branch.
+
+35
+00:02:38,379 --> 00:02:41,550
+If you did git push
+master hyphen hyphen force,
+
+36
+00:02:41,550 --> 00:02:46,490
+it will override the remote master with
+your rebase branch, which is not good.
+
+37
+00:02:47,449 --> 00:02:52,250
+So the second rule is that before you
+run git rebase, always ask yourself,
+
+38
+00:02:52,250 --> 00:02:54,650
+is anyone else looking at that branch?
+
+39
+00:02:56,020 --> 00:02:58,490
+So for example, with the main branch,
+
+40
+00:02:58,490 --> 00:03:02,009
+because other people are also
+working on the main branch,
+
+41
+00:03:02,009 --> 00:03:04,830
+don't do git rebase on the main branch.
+
+42
+00:03:06,150 --> 00:03:07,810
+Also, with the feature branches,
+
+43
+00:03:07,810 --> 00:03:12,439
+if you think couple of more people
+are working on the same feature branch,
+
+44
+00:03:12,439 --> 00:03:15,419
+then don't do git rebase
+in that feature branch.
+
+45
+00:03:16,460 --> 00:03:20,830
+Only do the git rebase in the
+branches where you are working on,
+
+46
+00:03:20,830 --> 00:03:25,539
+and you know that the rebase is
+going to be safer in that case.

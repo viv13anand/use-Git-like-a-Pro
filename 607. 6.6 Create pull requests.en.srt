@@ -1,0 +1,995 @@
+1
+00:00:06,629 --> 00:00:09,619
+We talked about that our
+end goal is to integrate
+
+2
+00:00:09,619 --> 00:00:12,019
+our work with the rest of our coworkers.
+
+3
+00:00:12,980 --> 00:00:18,100
+We saw two techniques to do it
+using merging and using rebasing.
+
+4
+00:00:18,859 --> 00:00:23,609
+So far, we have been merging our
+changes directly to the master branch,
+
+5
+00:00:23,609 --> 00:00:27,989
+but this is not the best way
+because it doesn't leave a
+
+6
+00:00:27,989 --> 00:00:31,649
+scope for your changes to be
+reviewed by your teammates.
+
+7
+00:00:32,590 --> 00:00:36,700
+There is another way to merge
+your changes into the master branch,
+
+8
+00:00:36,700 --> 00:00:38,750
+which is by creating pull requests.
+
+9
+00:00:40,109 --> 00:00:44,320
+Now, pull requests are
+not a feature of Git,
+
+10
+00:00:44,320 --> 00:00:49,920
+but is provided by Git hosting
+platforms like GitHub, GitLab, or Bitbucket.
+
+11
+00:00:51,200 --> 00:00:55,609
+The main goal of pull request is to
+merge your changes into the main branch.
+
+12
+00:00:56,960 --> 00:01:01,960
+The problems with merging directly
+into the master are it's less resilient.
+
+13
+00:01:02,679 --> 00:01:04,939
+Also, there is no way to get feedback.
+
+14
+00:01:05,480 --> 00:01:08,450
+So in case there is
+some issue with your code,
+
+15
+00:01:08,450 --> 00:01:12,010
+there's nobody to tell you that
+you need to make these changes.
+
+16
+00:01:13,349 --> 00:01:16,500
+Also, if people are merging
+directly into the master,
+
+17
+00:01:16,500 --> 00:01:19,290
+you will end up having way more conflicts.
+
+18
+00:01:21,170 --> 00:01:22,780
+So why create pull requests?
+
+19
+00:01:23,870 --> 00:01:26,560
+With pull requests, you
+can invite other people
+
+20
+00:01:26,560 --> 00:01:29,250
+to review your work and give you feedback.
+
+21
+00:01:30,299 --> 00:01:34,780
+Once your changes have been approved,
+your branch can be merged to master.
+
+22
+00:01:35,900 --> 00:01:38,909
+So without pull request,
+you would jump right into
+
+23
+00:01:38,909 --> 00:01:41,579
+merging your feature
+branch into the main branch.
+
+24
+00:01:42,670 --> 00:01:44,379
+However, with pull requests,
+
+25
+00:01:44,379 --> 00:01:48,650
+you will invite the reviewers to
+provide feedback before merging.
+
+26
+00:01:49,329 --> 00:01:52,510
+Once they approve, it's ready
+to be merged to the main branch.
+
+27
+00:01:53,840 --> 00:01:58,459
+Let's practice how to create pull
+requests, how to merge a pull request,
+
+28
+00:01:58,459 --> 00:02:02,370
+and also see how to resolve
+conflicts in the pull requests.
+
+29
+00:02:02,989 --> 00:02:05,329
+Let's go back to our
+video course repository.
+
+30
+00:02:06,500 --> 00:02:10,060
+I want to create a new
+feature branch for pull requests.
+
+31
+00:02:10,939 --> 00:02:17,319
+Let's say I create a new branch, git
+checkout, minus b, feed pull request.
+
+32
+00:02:21,530 --> 00:02:23,629
+Now let's make some
+changes to this branch.
+
+33
+00:02:24,710 --> 00:02:34,599
+Let's create a new file, file3.txt, and
+add some changes, pull request, commit one.
+
+34
+00:02:39,460 --> 00:02:49,099
+Let's make the commit, git
+commit minus m, commit one.
+
+35
+00:02:51,789 --> 00:02:55,530
+So now I want to merge this
+branch to the main branch.
+
+36
+00:02:56,460 --> 00:03:04,430
+One way is that I go to the
+main branch, git checkout, main,
+
+37
+00:03:04,430 --> 00:03:10,569
+and here I can do git
+merge, feature pull request.
+
+38
+00:03:11,509 --> 00:03:16,270
+Now, this is risky, especially if
+you're working in a project in a company,
+
+39
+00:03:17,150 --> 00:03:21,689
+So we never really run the merge
+command directly into the CLI.
+
+40
+00:03:22,729 --> 00:03:25,240
+And most of the time it's also restricted.
+
+41
+00:03:26,530 --> 00:03:28,979
+So instead of merging
+directly into the main,
+
+42
+00:03:28,979 --> 00:03:32,659
+what we will do is that we
+will create a pull request.
+
+43
+00:03:33,759 --> 00:03:35,479
+Now how to create a pull request?
+
+44
+00:03:36,319 --> 00:03:41,900
+Let's go back to our feature
+branch, get checkout, feature branch.
+
+45
+00:03:45,110 --> 00:03:53,219
+And here I will do git push because
+first I need to push this branch to remote.
+
+46
+00:03:55,319 --> 00:03:59,229
+Now git tells me that this
+branch does not exist on origin.
+
+47
+00:03:59,650 --> 00:04:01,310
+So I will need to run this command.
+
+48
+00:04:07,259 --> 00:04:11,210
+Okay, so now my branch is
+pushed along with my changes,
+
+49
+00:04:11,210 --> 00:04:14,800
+and here I have the
+link of the pull request.
+
+50
+00:04:15,340 --> 00:04:18,639
+So it says create a
+pull request from feature
+
+51
+00:04:18,639 --> 00:04:21,579
+pull request on GitHub
+by visiting this URL.
+
+52
+00:04:22,420 --> 00:04:23,740
+Let's copy this URL.
+
+53
+00:04:26,879 --> 00:04:29,500
+So this is a page where
+we create a pull request.
+
+54
+00:04:30,519 --> 00:04:34,439
+Now there are different
+conventions how to create a pull request.
+
+55
+00:04:35,620 --> 00:04:42,480
+Like for the title, it also should
+start with your type of pull request.
+
+56
+00:04:43,220 --> 00:04:44,980
+So we can do like this feature.
+
+57
+00:04:45,899 --> 00:04:51,810
+This pull request is for
+the feature pull requests
+
+58
+00:04:51,810 --> 00:04:55,750
+or learning to create pull requests.
+
+59
+00:04:59,089 --> 00:05:00,449
+Then you write the description.
+
+60
+00:05:01,310 --> 00:05:07,240
+In the title, you can also mention your
+ticket ID, like which is this ticket,
+
+61
+00:05:07,240 --> 00:05:10,000
+and then write more description about it.
+
+62
+00:05:11,480 --> 00:05:15,819
+There is also a template for the
+description, how to write good pull requests.
+
+63
+00:05:16,259 --> 00:05:23,310
+So one thing you would write is the
+summary, like what is this pull request about?
+
+64
+00:05:24,850 --> 00:05:29,750
+Like for example, Learning pull requests.
+
+65
+00:05:31,629 --> 00:05:35,879
+What are the changes? So then you
+can mention what are the changes.
+
+66
+00:05:39,600 --> 00:05:42,699
+Changes in file one.
+
+67
+00:05:44,009 --> 00:05:48,209
+Whenever you're working on a real
+feature, often you have a couple of changes.
+
+68
+00:05:48,310 --> 00:05:51,680
+Like for example, if you're
+working on a user login feature,
+
+69
+00:05:51,680 --> 00:05:57,540
+you will have a login screen. You will
+have a couple of more things related to API.
+
+70
+00:05:57,600 --> 00:06:00,500
+So you can mention all the
+changes in the changes section.
+
+71
+00:06:01,300 --> 00:06:02,980
+Then add the screenshots.
+
+72
+00:06:05,910 --> 00:06:11,240
+And add the relevant testing
+strategy, how to test this feature.
+
+73
+00:06:12,439 --> 00:06:15,589
+And you can also write
+additional notes in case
+
+74
+00:06:15,589 --> 00:06:18,040
+the reviewer needs to
+know anything special.
+
+75
+00:06:19,220 --> 00:06:22,670
+Now, why do we create
+pull requests like this?
+
+76
+00:06:23,069 --> 00:06:27,790
+It's because your pull requests are meant
+to be reviewed by your other coworkers.
+
+77
+00:06:28,389 --> 00:06:32,240
+And if you provide nice
+description about it, it's easier to review.
+
+78
+00:06:34,920 --> 00:06:37,319
+So now there's a button
+to create pull requests.
+
+79
+00:06:38,079 --> 00:06:41,110
+Every platform has their own UI,
+
+80
+00:06:41,110 --> 00:06:46,470
+but all the platforms provide the
+same functionality. Like for example,
+
+81
+00:06:46,470 --> 00:06:49,850
+you can add reviewers who
+reviews this pull request.
+
+82
+00:06:50,490 --> 00:06:53,800
+Then you can also assign
+the pull request to yourself.
+
+83
+00:06:54,680 --> 00:07:00,420
+You can provide labels, like for example,
+if you're working on a frontend or a bug,
+
+84
+00:07:00,420 --> 00:07:05,079
+you can provide label as bug,
+or if it is a frontend feature,
+
+85
+00:07:05,079 --> 00:07:09,029
+you can label it as
+frontend or label it as backend.
+
+86
+00:07:09,829 --> 00:07:12,649
+So labels are really
+helpful for the filtering.
+
+87
+00:07:14,750 --> 00:07:16,980
+Now let's click on create pull request.
+
+88
+00:07:19,160 --> 00:07:24,810
+So now it has created my pull
+request, and you can see in the commits,
+
+89
+00:07:24,810 --> 00:07:27,449
+I can see which is the commit.
+
+90
+00:07:29,050 --> 00:07:32,490
+Also in the files
+changed, I can see the changes.
+
+91
+00:07:33,050 --> 00:07:36,750
+So this is easier for the
+reviewer to review your changes.
+
+92
+00:07:37,430 --> 00:07:43,149
+Your reviewer will most likely be
+reviewing the changes in the files change section.
+
+93
+00:07:43,790 --> 00:07:45,529
+In case there are more files,
+
+94
+00:07:45,529 --> 00:07:50,860
+it will show more All the files
+with the changes in all those files.
+
+95
+00:07:57,259 --> 00:08:04,370
+So let's go back. And now what you
+can do is you can merge the request.
+
+96
+00:08:04,649 --> 00:08:10,110
+Here you have a couple of options. You
+can create a merge commit, simply merge.
+
+97
+00:08:11,069 --> 00:08:14,889
+I will use the first
+one. So merge pull request.
+
+98
+00:08:22,279 --> 00:08:23,110
+Confirm merge.
+
+99
+00:08:27,310 --> 00:08:32,059
+Now, in order to verify whether the
+changes are merged in the main branch,
+
+100
+00:08:32,059 --> 00:08:34,429
+let's go back to our main branch.
+
+101
+00:08:36,110 --> 00:08:40,299
+Let's go back to our editor, and
+here I will move to the main branch.
+
+102
+00:08:43,740 --> 00:08:44,980
+Let's pull the changes.
+
+103
+00:08:47,799 --> 00:08:51,110
+And now you can see the
+file tree is created,
+
+104
+00:08:51,110 --> 00:08:53,759
+and this has content
+pull request commit one.
+
+105
+00:08:54,299 --> 00:08:58,330
+So we got the changes
+related to pull requests.
+
+106
+00:08:59,190 --> 00:09:03,009
+So this is how you merge
+by creating pull requests.
+
+107
+00:09:04,649 --> 00:09:08,639
+Let's also see how we can get
+conflicts in our pull requests.
+
+108
+00:09:10,159 --> 00:09:13,139
+Now we know that in
+order to get conflicts,
+
+109
+00:09:13,139 --> 00:09:17,779
+we need to have different content in
+the same file in the two branches.
+
+110
+00:09:18,899 --> 00:09:20,460
+Let me create a new branch.
+
+111
+00:09:21,159 --> 00:09:27,710
+Get checkout minus B. Pull request.
+
+112
+00:09:30,649 --> 00:09:31,210
+Conflicts.
+
+113
+00:09:34,730 --> 00:09:36,129
+Let's change the file one.
+
+114
+00:09:39,200 --> 00:09:40,100
+Full request.
+
+115
+00:09:46,440 --> 00:09:50,860
+Let's make a commit,
+git add all, git commit.
+
+116
+00:09:56,970 --> 00:10:00,149
+Conflicts, commit one.
+
+117
+00:10:02,429 --> 00:10:04,730
+Let's go back to our main.
+
+118
+00:10:05,919 --> 00:10:09,889
+Or let's make the changes
+in main directly from the
+
+119
+00:10:09,899 --> 00:10:13,870
+GitHub so that we don't
+have to push those changes.
+
+120
+00:10:14,429 --> 00:10:20,230
+I can just go to the
+branch, and here I will create,
+
+121
+00:10:20,230 --> 00:10:25,059
+or I will change in the
+file1.txt. Let's edit this file.
+
+122
+00:10:28,820 --> 00:10:32,419
+Changes from main.
+
+123
+00:10:40,960 --> 00:10:42,559
+Okay, let's commit these changes.
+
+124
+00:10:43,000 --> 00:10:49,159
+And now the point is that we have
+changed file one in both the branches.
+
+125
+00:10:49,539 --> 00:10:52,509
+So file one is
+different in main branch and
+
+126
+00:10:52,509 --> 00:10:55,149
+file one is different
+in our feature branch.
+
+127
+00:10:57,070 --> 00:11:06,389
+Now, in order to merge, I first will
+Pushed my branch on GitHub. For that,
+
+128
+00:11:06,389 --> 00:11:13,090
+I need to run this command again. So
+now there is a link, and let's go to it.
+
+129
+00:11:14,370 --> 00:11:15,710
+Open a merge request.
+
+130
+00:11:17,690 --> 00:11:23,450
+I'm not adding any particular template,
+so we'll just add a normal description.
+
+131
+00:11:24,190 --> 00:11:25,750
+We are with conflicts.
+
+132
+00:11:31,100 --> 00:11:32,899
+Let's create the pull request.
+
+133
+00:11:35,360 --> 00:11:42,480
+Now in this case, it says that you had
+tagged demo two and you changed with,
+
+134
+00:11:42,480 --> 00:11:46,490
+you replaced the content
+with pull request changes one.
+
+135
+00:11:46,610 --> 00:11:48,590
+So it shows the changes in the files.
+
+136
+00:11:53,370 --> 00:11:59,029
+Okay, so now it clearly says that this
+branch has conflicts that must be resolved.
+
+137
+00:12:00,379 --> 00:12:03,320
+Now you can resolve conflicts with GitHub,
+
+138
+00:12:03,320 --> 00:12:07,929
+but let's see how to do
+it from the CLI itself.
+
+139
+00:12:09,389 --> 00:12:11,399
+So how I will resolve these changes.
+
+140
+00:12:14,100 --> 00:12:16,529
+The changes are first of all,
+
+141
+00:12:16,529 --> 00:12:20,169
+because both the branches have
+different content in file1.txt.
+
+142
+00:12:23,450 --> 00:12:28,710
+So first, I need to go to
+the main branch, git checkout
+
+143
+00:12:28,710 --> 00:12:32,659
+main, and pull the
+changes, pull the latest changes.
+
+144
+00:12:35,980 --> 00:12:39,139
+So now I have the changes
+which are made by another person.
+
+145
+00:12:40,799 --> 00:12:42,899
+I will go to the feature branch.
+
+146
+00:12:44,230 --> 00:12:58,570
+Now here, I can use the rebase
+strategy, git checkout, Rebase main.
+
+147
+00:13:00,970 --> 00:13:06,159
+You can also use a merging strategy,
+but I will be using git rebase here.
+
+148
+00:13:06,779 --> 00:13:11,639
+So once I do git rebase, it tells me
+that which changes you want to keep.
+
+149
+00:13:12,379 --> 00:13:14,340
+I want to keep both
+the changes, let's say.
+
+150
+00:13:15,100 --> 00:13:24,129
+So I will just add and do git
+rebase hyphen hyphen continue.
+
+151
+00:13:26,639 --> 00:13:31,289
+And now I have the
+changes from the main branch,
+
+152
+00:13:31,289 --> 00:13:37,340
+so I can push these changes because
+now these conflicts have been resolved.
+
+153
+00:13:43,240 --> 00:13:49,850
+Because we used rebase, we will have
+to use git push hyphen hyphen force.
+
+154
+00:13:51,730 --> 00:13:53,809
+Let's go back to our pull request.
+
+155
+00:14:08,389 --> 00:14:10,889
+And you can see there
+are no conflicts now.
+
+156
+00:14:13,940 --> 00:14:19,179
+Let's see how we can resolve conflicts
+using merge. So right now we used rebase.
+
+157
+00:14:19,720 --> 00:14:25,149
+So we pulled the latest changes of
+main into our branch by using rebase,
+
+158
+00:14:25,149 --> 00:14:27,470
+but you can also use merge.
+
+159
+00:14:28,110 --> 00:14:29,190
+Let's see how to do that.
+
+160
+00:14:30,450 --> 00:14:36,870
+So first let, let me go
+again and Change another file.
+
+161
+00:14:37,220 --> 00:14:39,970
+Let's say this time I change file two.
+
+162
+00:14:51,899 --> 00:14:55,559
+I will change the text and
+now I have more changes.
+
+163
+00:14:56,840 --> 00:15:02,139
+So now file2.txt is
+changed in the main branch.
+
+164
+00:15:03,019 --> 00:15:06,809
+I will change the same
+file in our feature branch.
+
+165
+00:15:07,870 --> 00:15:18,710
+So let's go back to our repository and
+change the file to pull request conflicts.
+
+166
+00:15:25,710 --> 00:15:28,330
+I will add the file, make the commit.
+
+167
+00:15:33,970 --> 00:15:34,850
+Commit to.
+
+168
+00:15:36,370 --> 00:15:39,090
+So in this commit, I have changed file to,
+
+169
+00:15:39,090 --> 00:15:42,710
+and I know the file to is
+changed on the main branch.
+
+170
+00:15:44,110 --> 00:15:47,940
+First, let's push the
+changes on our feature branch.
+
+171
+00:15:49,200 --> 00:15:52,039
+Let's go to the pull request.
+
+172
+00:15:59,320 --> 00:16:00,899
+So this is our pull request.
+
+173
+00:16:02,259 --> 00:16:06,559
+GitHub is evaluating that this branch
+has conflicts that must be resolved.
+
+174
+00:16:07,779 --> 00:16:12,909
+You can also resolve it from here, but
+let's see how to do it from the CLI.
+
+175
+00:16:14,529 --> 00:16:16,889
+Let's go back to our repository,
+
+176
+00:16:16,889 --> 00:16:21,230
+and this time I'm going to
+merge the changes of main.
+
+177
+00:16:24,100 --> 00:16:27,399
+First of all, right now
+when I do git merge main,
+
+178
+00:16:29,340 --> 00:16:34,070
+It will not bring the new
+changes because my local main branch
+
+179
+00:16:34,070 --> 00:16:38,019
+does not have the updater
+changes from the remote server.
+
+180
+00:16:38,820 --> 00:16:42,379
+So first I need to go
+to my main branch and
+
+181
+00:16:42,379 --> 00:16:44,960
+update my main branch
+with the new changes.
+
+182
+00:16:46,039 --> 00:16:51,639
+So I'll do git pull so that now my
+local main branch has the updater changes.
+
+183
+00:16:53,740 --> 00:16:56,129
+Let's go back to the feature branch
+
+184
+00:17:02,169 --> 00:17:09,450
+Now, instead of doing now git
+rebase main, I will do git merge main.
+
+185
+00:17:15,900 --> 00:17:23,119
+We have not moved to the feature
+branch, so let's move to the feature branch.
+
+186
+00:17:25,440 --> 00:17:26,140
+Git checkout.
+
+187
+00:17:27,970 --> 00:17:31,730
+I have created aliases, which I
+already taught in the previous section.
+
+188
+00:17:32,819 --> 00:17:34,960
+So this makes it easy to write commands.
+
+189
+00:17:40,819 --> 00:17:41,079
+Okay.
+
+190
+00:17:41,700 --> 00:17:45,720
+So now in this case, I'm
+going to do git merge main.
+
+191
+00:17:47,920 --> 00:17:50,950
+There are conflicts, of course,
+that's why we need to resolve it.
+
+192
+00:17:52,009 --> 00:17:56,269
+And let's accept our
+teammates changes this time.
+
+193
+00:17:57,940 --> 00:18:04,329
+Okay. So I have accepted
+this change and do git add all,
+
+194
+00:18:04,329 --> 00:18:08,160
+and then git merge hyphen hyphen continue.
+
+195
+00:18:10,220 --> 00:18:15,920
+So whenever we are done with our
+conflicts, we are, we have accepted the changes.
+
+196
+00:18:16,359 --> 00:18:20,140
+Then we need to run git add
+all and git merge continue.
+
+197
+00:18:23,980 --> 00:18:26,200
+In this case, there is
+going to be a merge commit.
+
+198
+00:18:30,609 --> 00:18:32,049
+So you can see there are changes.
+
+199
+00:18:32,170 --> 00:18:36,500
+There are changes from this
+feature branch and there is additional
+
+200
+00:18:36,500 --> 00:18:40,440
+merge commit created because we
+resolved the conflicts using merge.
+
+201
+00:18:44,319 --> 00:18:46,339
+Now let's do git push.
+
+202
+00:18:49,819 --> 00:18:54,640
+Let's go back to our pull request.
+
+203
+00:18:58,640 --> 00:19:03,759
+And now the conflicts have been resolved,
+and you can click on Merge Pull Request,
+
+204
+00:19:03,759 --> 00:19:06,140
+and this will merge your pull request.
+
+205
+00:19:09,390 --> 00:19:12,490
+So this is how you create a pull request,
+
+206
+00:19:12,490 --> 00:19:16,269
+and this is how you resolve
+conflicts in your pull request.
+
+207
+00:19:16,710 --> 00:19:21,279
+You can either use merge or you
+can use rebase to resolve conflicts,
+
+208
+00:19:21,279 --> 00:19:23,039
+whichever works better for you.
+
+209
+00:19:23,819 --> 00:19:27,960
+When you will use rebase, there will
+not be any additional merge commit.
+
+210
+00:19:28,519 --> 00:19:30,640
+However, the history would be different.
+
+211
+00:19:31,160 --> 00:19:34,599
+So you will often have to do
+git push hyphen hyphen force.
+
+212
+00:19:35,559 --> 00:19:40,490
+So make your decision according to what
+you think suits your scenario the best.
