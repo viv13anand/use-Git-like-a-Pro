@@ -1,0 +1,567 @@
+1
+00:00:06,599 --> 00:00:09,019
+Before we talk about branching strategies,
+
+2
+00:00:09,019 --> 00:00:11,839
+let's first talk about
+the branching workflow.
+
+3
+00:00:12,539 --> 00:00:15,169
+While we are working on a project,
+
+4
+00:00:15,169 --> 00:00:20,059
+our end goal is to integrate our
+changes with other team members' changes.
+
+5
+00:00:20,780 --> 00:00:24,609
+We have a mainline workflow
+where we work with a single branch,
+
+6
+00:00:24,609 --> 00:00:26,199
+which is our main branch.
+
+7
+00:00:27,179 --> 00:00:30,460
+All the commits are
+made to this main branch,
+
+8
+00:00:30,460 --> 00:00:34,469
+and everyone is working and
+contributing to the same main branch.
+
+9
+00:00:35,539 --> 00:00:40,619
+The benefit of it is that because of
+single branch, it's easy to track changes,
+
+10
+00:00:40,619 --> 00:00:44,000
+but there is also a risk
+of shipping big changes.
+
+11
+00:00:44,840 --> 00:00:47,939
+Since everyone is
+committing to the same branch,
+
+12
+00:00:47,939 --> 00:00:52,969
+there is a risk that something will
+break, which makes it less resilient.
+
+13
+00:00:53,750 --> 00:00:58,590
+We also need to make sure that we
+have a high quality test environment
+
+14
+00:00:58,590 --> 00:01:02,049
+to make sure that nothing
+breaks on the main branch.
+
+15
+00:01:03,359 --> 00:01:05,500
+That is why we have
+different types of branches.
+
+16
+00:01:06,319 --> 00:01:11,120
+So we have feature branch, which is
+generally created for developing any feature.
+
+17
+00:01:11,859 --> 00:01:13,280
+Then we have a develop branch.
+
+18
+00:01:13,780 --> 00:01:18,560
+We have a hotfix or bugfix
+branches, release branch for the releases,
+
+19
+00:01:18,560 --> 00:01:21,739
+and main branch, which
+is the default branch.
+
+20
+00:01:23,019 --> 00:01:28,310
+Now, in terms of branches, we have some
+branches which are long-running branches,
+
+21
+00:01:28,310 --> 00:01:31,159
+and the other branches
+are short-lived branches.
+
+22
+00:01:32,769 --> 00:01:35,969
+Long running branches
+are those branches which
+
+23
+00:01:35,969 --> 00:01:38,709
+stay throughout the course of development.
+
+24
+00:01:39,730 --> 00:01:42,359
+So we have a main branch,
+which is the default branch.
+
+25
+00:01:42,939 --> 00:01:45,969
+And in some projects, we
+also have a develop branch,
+
+26
+00:01:45,969 --> 00:01:48,400
+which is running
+parallel to the main branch.
+
+27
+00:01:48,840 --> 00:01:52,260
+And it also persist as
+a long running branch.
+
+28
+00:01:56,469 --> 00:02:02,620
+We also have some short lib branches,
+like feature branch or hotfix branch.
+
+29
+00:02:03,280 --> 00:02:07,840
+So for the short lib branches,
+they are there only for a short time.
+
+30
+00:02:08,490 --> 00:02:11,110
+Once their purpose is
+finished, they are deleted.
+
+31
+00:02:11,870 --> 00:02:14,620
+For example, if you have
+to create a new feature,
+
+32
+00:02:14,620 --> 00:02:16,550
+you would be creating a feature branch.
+
+33
+00:02:17,169 --> 00:02:20,199
+But once your feature
+development has been completed
+
+34
+00:02:20,199 --> 00:02:22,849
+and it's merged to the main branch,
+
+35
+00:02:22,849 --> 00:02:25,500
+you would be deleting the feature branch.
+
+36
+00:02:26,439 --> 00:02:30,750
+Same goes with the hotfix or
+bugfix branch. When the bug is fixed,
+
+37
+00:02:30,750 --> 00:02:32,050
+we would delete the bugfix.
+
+38
+00:02:32,750 --> 00:02:35,870
+And also with the release
+branch, once the release is done,
+
+39
+00:02:35,870 --> 00:02:37,289
+we delete the release branch.
+
+40
+00:02:38,469 --> 00:02:41,530
+Now that you know about
+different types of branches,
+
+41
+00:02:41,530 --> 00:02:43,229
+let's discuss the branching strategies.
+
+42
+00:02:44,569 --> 00:02:48,430
+So the most common branching
+strategies we have are Git flow,
+
+43
+00:02:48,430 --> 00:02:50,879
+and the second one is GitHub flow.
+
+44
+00:02:52,020 --> 00:02:54,219
+First, let's talk about the Git flow.
+
+45
+00:02:55,699 --> 00:02:59,060
+In Git flow, we have two
+long-running branches.
+
+46
+00:02:59,939 --> 00:03:04,319
+One is the main branch, which always
+reflect the current production state.
+
+47
+00:03:05,530 --> 00:03:09,770
+There is a second long-running
+branch, which is typically called Develop.
+
+48
+00:03:10,990 --> 00:03:15,419
+All the features start from the
+Develop branch, and once they are developed,
+
+49
+00:03:15,419 --> 00:03:18,139
+they are merged back
+into the Develop branch.
+
+50
+00:03:19,930 --> 00:03:23,050
+Develop branch is also the
+starting point for new releases.
+
+51
+00:03:23,689 --> 00:03:29,349
+So developers open a new release branch
+from the develop branch and work on that,
+
+52
+00:03:29,349 --> 00:03:32,750
+test it in case there are any bug fixes.
+
+53
+00:03:33,469 --> 00:03:35,349
+It is fixed in the release branch.
+
+54
+00:03:36,849 --> 00:03:41,770
+And once everything works and you are
+confident that it's ready for production,
+
+55
+00:03:41,770 --> 00:03:44,409
+you merge your release branch into main.
+
+56
+00:03:45,979 --> 00:03:49,840
+As the last step, you
+add a tag for the release
+
+57
+00:03:49,840 --> 00:03:52,639
+commit on main and
+delete the release branch.
+
+58
+00:03:54,300 --> 00:03:58,270
+This type of strategy works
+well for package softwares
+
+59
+00:03:58,270 --> 00:04:00,469
+or libraries with frequent releases.
+
+60
+00:04:01,430 --> 00:04:03,960
+However, for website
+projects where releases
+
+61
+00:04:03,960 --> 00:04:07,330
+are very frequent, it
+might be an overkill.
+
+62
+00:04:10,069 --> 00:04:13,439
+So the next strategy
+we have is GitHub Flow.
+
+63
+00:04:14,879 --> 00:04:19,430
+In this strategy, we only have one
+long-running branch, which is the main branch.
+
+64
+00:04:20,569 --> 00:04:25,600
+You will cut all the branches, be
+it a feature branch, bug fix branch,
+
+65
+00:04:25,600 --> 00:04:27,389
+everything from the main branch.
+
+66
+00:04:29,000 --> 00:04:31,009
+Once your feature
+development is completed,
+
+67
+00:04:31,009 --> 00:04:34,040
+you will merge it back to the main branch.
+
+68
+00:04:36,930 --> 00:04:41,470
+So this type of strategy is
+easier and more straightforward.
+
+69
+00:04:42,189 --> 00:04:47,430
+I would suggest to use this if you
+are working on a continuous delivery
+
+70
+00:04:47,430 --> 00:04:50,420
+project with short production
+cycles and frequent releases.
+
+71
+00:04:50,899 --> 00:04:56,480
+So if your releases are like once in a
+day or two times in a day, use GitHub Flow.
+
+72
+00:04:57,459 --> 00:05:01,680
+It's extremely lean and simple.
+There is only one long running branch,
+
+73
+00:05:01,680 --> 00:05:03,589
+which is the default main branch.
+
+74
+00:05:04,949 --> 00:05:06,939
+Talking about branch naming conventions,
+
+75
+00:05:06,939 --> 00:05:10,509
+we already talked about some
+conventions for the commits.
+
+76
+00:05:11,430 --> 00:05:15,720
+Similarly, we have some naming
+conventions for the branches as well.
+
+77
+00:05:16,579 --> 00:05:20,639
+So firstly, all the branch
+names should be in lowercase.
+
+78
+00:05:21,560 --> 00:05:26,290
+So for example, with feature new
+login, it has to be in the lowercase.
+
+79
+00:05:27,810 --> 00:05:32,389
+If there are multiple words,
+use hyphens to separate words.
+
+80
+00:05:33,110 --> 00:05:36,189
+Don't use any underscores or spaces.
+
+81
+00:05:38,560 --> 00:05:43,420
+Use alphanumeric characters, so no
+special symbols like dollar, underscore.
+
+82
+00:05:44,939 --> 00:05:46,779
+Names should be descriptive.
+
+83
+00:05:47,639 --> 00:05:50,319
+You can also include Jira ID in the name.
+
+84
+00:05:50,870 --> 00:05:53,040
+Like for example, for user authentication,
+
+85
+00:05:53,040 --> 00:05:58,850
+you can name it as feature slash your
+Jira ID, then the name of the feature.
+
+86
+00:05:59,790 --> 00:06:02,470
+We have couple of
+examples for the branch names.
+
+87
+00:06:03,550 --> 00:06:06,040
+So it needs to be start
+with the type of the branch.
+
+88
+00:06:06,579 --> 00:06:12,480
+So we can say feature slash Jira ID. Your
+Jira ticket ID, then name of the feature.
+
+89
+00:06:13,120 --> 00:06:16,639
+For the bug fix, it
+should start with like bug
+
+90
+00:06:16,639 --> 00:06:19,100
+fix slash ticket ID and the description.
+
+91
+00:06:19,720 --> 00:06:25,649
+For release, it's like release slash
+hotfix hotfix slash docs doc slash.
+
+92
+00:06:26,850 --> 00:06:28,769
+If there is any library update,
+
+93
+00:06:28,769 --> 00:06:32,930
+you can name it as core slash
+your ticket ID and the description.
+
+94
+00:06:34,120 --> 00:06:38,160
+Now we know what are branches
+and how to create branches,
+
+95
+00:06:38,160 --> 00:06:40,360
+how to switch between different branches.
+
+96
+00:06:41,060 --> 00:06:44,959
+Let's see how we can move commits
+from one branch to another branch.
+
+97
+00:06:46,019 --> 00:06:49,750
+For that, first do git
+log and copy the commit
+
+98
+00:06:49,750 --> 00:06:53,110
+hash of the commit which you want to move.
+
+99
+00:06:54,750 --> 00:06:58,509
+Then switch to the branch
+where you want to move the commit.
+
+100
+00:07:00,240 --> 00:07:04,240
+For switching, you can use git
+checkout, name of the branch,
+
+101
+00:07:04,240 --> 00:07:08,610
+and then use cherry pick command,
+git cherry pick the commit hash.
+
+102
+00:07:10,089 --> 00:07:11,290
+We are back to the repo.
+
+103
+00:07:12,550 --> 00:07:19,389
+So let's create a new
+branch, git checkout, minus b.
+
+104
+00:07:19,389 --> 00:07:25,540
+I'm also moving to this
+branch, cherry pick demo.
+
+105
+00:07:30,430 --> 00:07:32,550
+Notice the name of the branch.
+
+106
+00:07:33,069 --> 00:07:34,759
+So I have created feed.
+
+107
+00:07:35,779 --> 00:07:39,160
+We also use feed or
+sometimes feature, both are fine.
+
+108
+00:07:39,740 --> 00:07:43,480
+And then I have separated the
+cherry pick demo with hyphens.
+
+109
+00:07:47,279 --> 00:07:53,250
+Now let's make a commit,
+cherry pick this commit.
+
+110
+00:07:56,750 --> 00:07:58,089
+Let's add this commit.
+
+111
+00:08:01,889 --> 00:08:06,610
+Git commit minus m cherry pick demo.
+
+112
+00:08:09,509 --> 00:08:11,329
+Verify it from the git log.
+
+113
+00:08:12,689 --> 00:08:16,730
+So this is the commit that we
+want to move to the main branch.
+
+114
+00:08:17,730 --> 00:08:19,689
+So first I will copy this hash.
+
+115
+00:08:22,500 --> 00:08:28,120
+Now I switch to the main
+branch, git checkout main.
+
+116
+00:08:32,509 --> 00:08:36,330
+Check the git log. So right
+now, we don't have that commit.
+
+117
+00:08:36,690 --> 00:08:38,950
+The last commit we have is head-demo-to.
+
+118
+00:08:42,860 --> 00:08:47,690
+In order to move the commit,
+actually to copy the commit,
+
+119
+00:08:47,690 --> 00:08:51,649
+let's run this git
+cherry-pick and the commit hash.
+
+120
+00:08:54,950 --> 00:09:00,429
+Now, if we run git log, we have
+cherry pick demo commit on this branch.
+
+121
+00:09:01,360 --> 00:09:05,200
+So this is how you can copy commits
+from one branch to another branch.

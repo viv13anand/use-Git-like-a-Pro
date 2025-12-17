@@ -1,0 +1,149 @@
+1
+00:00:06,700 --> 00:00:09,060
+Let's recap what we
+learned in this lesson.
+
+2
+00:00:09,830 --> 00:00:13,109
+So firstly, we talked about
+branches, what are branches,
+
+3
+00:00:13,109 --> 00:00:16,399
+and how to work with
+different types of branches,
+
+4
+00:00:16,399 --> 00:00:18,589
+like feature branch, bug fix branch.
+
+5
+00:00:19,410 --> 00:00:21,390
+We also discussed the concept of head.
+
+6
+00:00:21,969 --> 00:00:25,429
+We talked about that head
+always refers to the latest
+
+7
+00:00:25,429 --> 00:00:28,539
+commit on the branch on which you are on.
+
+8
+00:00:29,429 --> 00:00:31,699
+If you switch the branches,
+
+9
+00:00:31,699 --> 00:00:37,140
+then head will represent the latest
+commit on the newly switched branch.
+
+10
+00:00:38,520 --> 00:00:42,750
+We talked about some branch
+commands, like how to create a branch,
+
+11
+00:00:42,750 --> 00:00:47,340
+how to delete a branch, and how to
+switch between the different branches.
+
+12
+00:00:48,179 --> 00:00:52,740
+We talked about branching strategies,
+mainly two types of branching strategies,
+
+13
+00:00:52,740 --> 00:00:54,820
+Git flow and GitHub flow.
+
+14
+00:00:55,740 --> 00:01:00,140
+Git flow is used in the
+projects where releases are
+
+15
+00:01:00,140 --> 00:01:03,659
+less frequent, like
+months, one or two months.
+
+16
+00:01:04,420 --> 00:01:08,040
+However, for website projects
+where the releases are very frequent,
+
+17
+00:01:08,040 --> 00:01:11,290
+like once a day or two times a day,
+
+18
+00:01:11,290 --> 00:01:15,629
+you can use GitHub Flow because
+that is more easier to manage.
+
+19
+00:01:16,390 --> 00:01:20,140
+We talked about what are
+tags, why do we need tags,
+
+20
+00:01:20,140 --> 00:01:22,530
+and how to use them for releases.
+
+21
+00:01:23,150 --> 00:01:26,930
+We saw there were two types of
+tags. One is the lightweight tag.
+
+22
+00:01:27,430 --> 00:01:30,569
+Another one is annotated
+tags with more description.
+
+23
+00:01:31,590 --> 00:01:37,189
+Coming to the exercise now, You are asked
+to develop user authentication feature,
+
+24
+00:01:37,189 --> 00:01:39,790
+follow all the steps which are required.
+
+25
+00:01:40,769 --> 00:01:47,620
+So first you need to create a
+branch, use branch naming conventions,
+
+26
+00:01:47,620 --> 00:01:52,189
+create two files,
+authentication.js, loginform.html, make a commit,
+
+27
+00:01:52,189 --> 00:01:55,040
+and also use conventional commits.
+
+28
+00:01:56,959 --> 00:02:02,079
+In the part two from the GitHub
+UI, create a separate branch,
+
+29
+00:02:02,079 --> 00:02:06,769
+which should be a bug fix branch
+in the authentication feature.
+
+30
+00:02:07,849 --> 00:02:09,969
+Use a proper branch name,
+
+31
+00:02:09,969 --> 00:02:14,650
+then make a commit and
+cherry pick that bug fix commit
+
+32
+00:02:14,650 --> 00:02:18,039
+from that branch in your
+authentication feature branch.

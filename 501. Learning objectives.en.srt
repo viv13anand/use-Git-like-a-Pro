@@ -1,0 +1,77 @@
+1
+00:00:06,669 --> 00:00:09,320
+Welcome to lesson five,
+Discovering Branches and Tags.
+
+2
+00:00:10,099 --> 00:00:13,150
+In this lesson, we'll
+dive into branches and tags,
+
+3
+00:00:13,150 --> 00:00:16,210
+two powerful tools in
+Git that help you organize
+
+4
+00:00:16,210 --> 00:00:18,250
+and manage your work more effectively.
+
+5
+00:00:19,089 --> 00:00:22,940
+These features are essential for
+tracking different lines of development
+
+6
+00:00:22,940 --> 00:00:26,019
+and marking important
+points in your project history.
+
+7
+00:00:26,890 --> 00:00:30,690
+We'll start by understanding what
+branches are and how they work,
+
+8
+00:00:30,690 --> 00:00:35,859
+followed by a quick overview of the
+concept of head and its role in Git.
+
+9
+00:00:37,039 --> 00:00:39,740
+Next, we'll explore the
+essential Git commands.
+
+10
+00:00:40,369 --> 00:00:43,079
+We'll also take a look at
+common branching strategies
+
+11
+00:00:43,079 --> 00:00:46,090
+to help you make the
+most out of your workflow.
+
+12
+00:00:46,710 --> 00:00:49,159
+After that, we'll shift our focus to tags,
+
+13
+00:00:49,159 --> 00:00:52,520
+learning how to use tags for
+marking releases in your project.
+
+14
+00:00:53,159 --> 00:00:55,420
+We'll wrap up with
+summing up everything we
+
+15
+00:00:55,420 --> 00:00:57,670
+have learned in this
+lesson and an exercise.
+
+16
+00:00:58,359 --> 00:01:00,960
+That's our journey for
+this lesson. Let's jump in.

@@ -1,0 +1,279 @@
+1
+00:00:06,639 --> 00:00:09,080
+Let's look at the commands of git branch.
+
+2
+00:00:09,619 --> 00:00:13,849
+So first command we have is to list
+all the branches, which is git branch.
+
+3
+00:00:14,509 --> 00:00:16,480
+It tells you all the branches you have.
+
+4
+00:00:18,890 --> 00:00:21,269
+Next, we have git branch branch name,
+
+5
+00:00:21,269 --> 00:00:24,339
+which we have already seen
+in the previous sections.
+
+6
+00:00:24,960 --> 00:00:26,839
+This command creates a new branch.
+
+7
+00:00:28,140 --> 00:00:34,039
+Then we have checkout or switch branch
+command to switch to an existing branch.
+
+8
+00:00:34,600 --> 00:00:37,390
+You can either use git
+checkout branch name,
+
+9
+00:00:37,390 --> 00:00:41,219
+or you can use git switch
+to switch to another branch.
+
+10
+00:00:42,880 --> 00:00:46,880
+For creating a new branch and
+switching to it immediately,
+
+11
+00:00:46,890 --> 00:00:50,890
+you can use git checkout
+minus b and branch name.
+
+12
+00:00:53,719 --> 00:00:55,689
+In order to delete a branch,
+
+13
+00:00:55,689 --> 00:00:59,969
+you can use git branch hyphen
+capital D along with the branch name.
+
+14
+00:01:01,609 --> 00:01:03,530
+Let's practice all these commands.
+
+15
+00:01:04,569 --> 00:01:06,319
+Let's move back to our repo.
+
+16
+00:01:07,159 --> 00:01:09,079
+So right now we are on main branch.
+
+17
+00:01:11,709 --> 00:01:16,030
+We have some changes. I will
+just remove those changes.
+
+18
+00:01:16,439 --> 00:01:18,219
+I'm using git checkout command.
+
+19
+00:01:18,439 --> 00:01:24,390
+You can also use git restore command
+to get rid of the changes you have.
+
+20
+00:01:26,109 --> 00:01:29,769
+So now I have no more changes.
+
+21
+00:01:33,069 --> 00:01:38,799
+So first of all, let's use git branch
+command to see which all branches we have.
+
+22
+00:01:40,060 --> 00:01:44,689
+So I do have feed checkout and feed
+user login, all of these branches.
+
+23
+00:01:48,379 --> 00:01:52,439
+In order to create a new branch,
+
+24
+00:01:52,439 --> 00:01:58,250
+we can simply do git branch
+and the name branch-demo.
+
+25
+00:02:01,120 --> 00:02:04,659
+To verify if this branch was
+successfully created or not,
+
+26
+00:02:04,659 --> 00:02:09,610
+you can run the git branch command
+again, and it says feature branch demo,
+
+27
+00:02:09,610 --> 00:02:13,150
+so we already see the
+branch which we have created.
+
+28
+00:02:15,069 --> 00:02:20,389
+So if I now want to move to this
+feature branch, feature branch demo,
+
+29
+00:02:21,379 --> 00:02:25,969
+I will need to run git
+checkout, the branch name.
+
+30
+00:02:30,550 --> 00:02:36,919
+Now if I run git status, it tells me
+I'm on branch feature, branch demo.
+
+31
+00:02:38,500 --> 00:02:41,360
+So right now I had to run two commands.
+
+32
+00:02:41,879 --> 00:02:44,810
+So basically I created
+a new branch and then
+
+33
+00:02:44,810 --> 00:02:47,729
+I run git checkout to move to that branch.
+
+34
+00:02:48,590 --> 00:02:52,430
+So we have a shortcut to do
+both steps in one command.
+
+35
+00:02:53,789 --> 00:02:57,360
+Let's go back to the main branch.
+
+36
+00:03:00,560 --> 00:03:04,189
+Let's create another
+branch and move to it.
+
+37
+00:03:05,169 --> 00:03:11,439
+So what we can write here is git
+checkout minus b, the new branch name.
+
+38
+00:03:13,939 --> 00:03:16,530
+Branch demo two.
+
+39
+00:03:17,689 --> 00:03:22,629
+So what this command will do is
+that it will create this branch,
+
+40
+00:03:22,629 --> 00:03:26,439
+feature branch demo two, and
+also switches to this branch.
+
+41
+00:03:27,580 --> 00:03:29,939
+So now if I run this command,
+
+42
+00:03:29,939 --> 00:03:34,000
+it says switch to a new
+branch feed slash branch demo two.
+
+43
+00:03:35,159 --> 00:03:38,300
+So this is a very handy,
+so usually I personally run
+
+44
+00:03:38,300 --> 00:03:41,150
+this command whenever I
+have to create a new branch.
+
+45
+00:03:41,870 --> 00:03:44,840
+And most of the time I
+want to move to that branch
+
+46
+00:03:44,840 --> 00:03:46,810
+because I want to work on that branch.
+
+47
+00:03:49,349 --> 00:03:51,550
+Let's move back to the master branch.
+
+48
+00:03:52,770 --> 00:03:55,789
+Instead of checkout,
+you can also use switch.
+
+49
+00:04:00,099 --> 00:04:01,020
+Switch domain.
+
+50
+00:04:04,599 --> 00:04:08,659
+Now let's say I want to
+delete Couple of branches.
+
+51
+00:04:09,479 --> 00:04:13,379
+So what I will do is first I want
+to list all the branches I have.
+
+52
+00:04:14,240 --> 00:04:17,759
+Let's say I want to
+delete feed checkout demo too.
+
+53
+00:04:18,480 --> 00:04:27,110
+So I'll just copy it and do
+git branch-t the branch name.
+
+54
+00:04:28,970 --> 00:04:32,399
+And now it tells me that you have
+deleted branch checkout demo two.
+
+55
+00:04:34,120 --> 00:04:36,899
+If I want to delete
+multiple branches together,
+
+56
+00:04:38,800 --> 00:04:44,220
+I can type all the branch names
+together. So let's copy two branches.
+
+57
+00:04:45,120 --> 00:04:49,060
+Let's delete branch
+demo and branch demo two.
+
+58
+00:04:50,000 --> 00:04:57,149
+So let's copy this and run the same
+command with minus D, git branch minus D.
+
+59
+00:05:01,180 --> 00:05:03,480
+Name of the branches separated by space.
+
+60
+00:05:05,509 --> 00:05:10,220
+Now it says that you have deleted
+branch demo and branch demo two.

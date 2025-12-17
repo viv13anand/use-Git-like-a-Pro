@@ -1,0 +1,310 @@
+1
+00:00:06,690 --> 00:00:10,609
+Before we discuss branches, let's
+first talk about our commit process.
+
+2
+00:00:11,189 --> 00:00:13,259
+So when we are creating commits,
+
+3
+00:00:13,259 --> 00:00:17,379
+what we are actually doing is
+linking commits to the previous commit.
+
+4
+00:00:19,399 --> 00:00:22,910
+So this is a linear flow
+of commits because we are
+
+5
+00:00:22,910 --> 00:00:25,469
+putting commits on top
+of the previous commit.
+
+6
+00:00:26,550 --> 00:00:32,149
+However, when we want to incorporate any
+new feature without breaking existing code,
+
+7
+00:00:32,149 --> 00:00:34,729
+we need to work with branches.
+
+8
+00:00:36,020 --> 00:00:36,799
+What is a branch?
+
+9
+00:00:37,369 --> 00:00:40,240
+A branch represents an
+independent line of development.
+
+10
+00:00:41,670 --> 00:00:45,570
+Let's say you want to work on a
+user login feature in your project.
+
+11
+00:00:46,170 --> 00:00:50,700
+So what you will do is
+that you will cut a new
+
+12
+00:00:50,700 --> 00:00:52,969
+feature branch in order to independently
+
+13
+00:00:52,969 --> 00:00:56,740
+work without breaking any
+existing changes on the master branch.
+
+14
+00:00:57,579 --> 00:01:00,840
+All the commits that we
+will do on user login
+
+15
+00:01:00,840 --> 00:01:03,439
+feature branch will
+exist only on that branch.
+
+16
+00:01:04,040 --> 00:01:08,359
+This will make sure that we don't
+affect the master branch changes.
+
+17
+00:01:11,329 --> 00:01:14,489
+Technically, a branch is nothing
+but just a pointer to commits.
+
+18
+00:01:15,150 --> 00:01:22,079
+So when you create a branch, all what Git
+needs to do is just create a new pointer.
+
+19
+00:01:22,980 --> 00:01:25,579
+It doesn't change the
+repository in any way.
+
+20
+00:01:26,939 --> 00:01:31,319
+So let's say you had a master
+branch, which is referring to commit C3.
+
+21
+00:01:32,250 --> 00:01:37,230
+Now, when you commit a feature branch,
+You will say git branch feature branch.
+
+22
+00:01:38,010 --> 00:01:40,939
+Git will just create a new pointer for it,
+
+23
+00:01:40,939 --> 00:01:46,140
+and all the changes that you will do
+will be a part of the feature branch.
+
+24
+00:01:46,920 --> 00:01:52,319
+So now the feature branch will be
+pointing to the latest commit, which is C6,
+
+25
+00:01:52,319 --> 00:01:55,930
+but the master branch
+would still be pointing to C3.
+
+26
+00:01:57,540 --> 00:02:00,750
+Talking more about the
+master branch or main branch,
+
+27
+00:02:00,750 --> 00:02:06,109
+so this is a default branch which you
+get when you create a new repository.
+
+28
+00:02:06,950 --> 00:02:09,479
+This is created by default by Git.
+
+29
+00:02:10,240 --> 00:02:14,479
+It's just like any other branch,
+just that it's an initial branch.
+
+30
+00:02:15,909 --> 00:02:19,389
+GitHub now has changed the
+naming of this branch to main branch.
+
+31
+00:02:19,830 --> 00:02:24,750
+So in a lot of places, you will see the
+main name is getting used more often.
+
+32
+00:02:25,689 --> 00:02:27,379
+Also, it depends on the organization,
+
+33
+00:02:27,379 --> 00:02:30,189
+which name they want to
+keep for their initial branch.
+
+34
+00:02:31,189 --> 00:02:35,530
+Usually we have main, master, and
+trunk, some of the common names.
+
+35
+00:02:36,960 --> 00:02:38,360
+Let's go back to our project.
+
+36
+00:02:39,919 --> 00:02:41,879
+So we are right now on the main branch.
+
+37
+00:02:42,740 --> 00:02:45,539
+You can verify this with git status.
+
+38
+00:02:47,210 --> 00:02:55,469
+Let's make some changes to file one,
+and let's say git branch demo one.
+
+39
+00:02:59,530 --> 00:03:07,810
+Let's add this commit, git
+commit minus m branch demo.
+
+40
+00:03:10,110 --> 00:03:14,560
+Let's verify with the git log, and
+we have made this branch demo commit.
+
+41
+00:03:16,360 --> 00:03:19,770
+Now, this is my main branch,
+which already has some commits,
+
+42
+00:03:19,770 --> 00:03:23,789
+but now I want to make a new
+feature, which is user login.
+
+43
+00:03:24,830 --> 00:03:26,490
+So I will create a new branch.
+
+44
+00:03:27,949 --> 00:03:31,210
+You can use git branch,
+the name of the new branch.
+
+45
+00:03:31,930 --> 00:03:33,770
+Let's say user login.
+
+46
+00:03:37,620 --> 00:03:40,719
+We talked about that in
+order to switch to the branch,
+
+47
+00:03:40,719 --> 00:03:42,419
+we can use git checkout command.
+
+48
+00:03:43,939 --> 00:03:48,030
+So we can use git checkout, the
+name of the newly created branch.
+
+49
+00:03:51,770 --> 00:03:55,969
+So now if you make any changes,
+it should be only on this branch.
+
+50
+00:03:56,810 --> 00:04:00,129
+So let's change the file one.txt.
+
+51
+00:04:02,539 --> 00:04:04,240
+Let's say user login feature.
+
+52
+00:04:11,229 --> 00:04:20,019
+And commit this, git add all, git
+commit, minus m, user login demo.
+
+53
+00:04:24,879 --> 00:04:27,810
+Now, if I check my Git log,
+
+54
+00:04:27,810 --> 00:04:33,649
+so this was the branch demo commit
+from where I created my new branch.
+
+55
+00:04:33,889 --> 00:04:37,310
+So this was the commit from
+where I initialized my new branch.
+
+56
+00:04:38,079 --> 00:04:41,500
+And I made another commit,
+which is user login demo.
+
+57
+00:04:42,459 --> 00:04:50,930
+Now, if I go back to the master,
+git checkout, git checkout main,
+
+58
+00:04:53,310 --> 00:05:00,040
+I'm using main and master
+interchangeably, so when I say master, it can be main,
+
+59
+00:05:00,040 --> 00:05:04,519
+so just make sure that
+it's the same main branch.
+
+60
+00:05:05,810 --> 00:05:09,629
+Now, if I go back to
+the main, checkout main,
+
+61
+00:05:09,629 --> 00:05:12,689
+and let's check the history with git log.
+
+62
+00:05:14,399 --> 00:05:19,360
+Here you can see there is no
+commit related to user login feature,
+
+63
+00:05:19,360 --> 00:05:22,420
+which means that in my user login branch,
+
+64
+00:05:22,420 --> 00:05:26,620
+I can make as many commits
+without affecting the main branch.
+
+65
+00:05:27,319 --> 00:05:31,459
+So in this way, I created an
+independent line of development
+
+66
+00:05:31,459 --> 00:05:34,459
+for my feature by using a separate branch.
