@@ -1,0 +1,101 @@
+1
+00:00:06,690 --> 00:00:08,679
+Let's recap what we
+learned in this lesson.
+
+2
+00:00:09,039 --> 00:00:11,339
+So we learned how to
+create perfect commits.
+
+3
+00:00:11,839 --> 00:00:15,320
+We saw the first rule is
+to create granular commits,
+
+4
+00:00:15,320 --> 00:00:18,460
+and the second is to write
+commit messages properly.
+
+5
+00:00:19,019 --> 00:00:20,890
+We talked about conventional commits,
+
+6
+00:00:20,890 --> 00:00:24,629
+how we can write better commit
+messages using conventional commits.
+
+7
+00:00:25,370 --> 00:00:30,890
+We also talked about amending commits.
+We saw that we can amend commit message,
+
+8
+00:00:30,890 --> 00:00:35,710
+and also we can add files
+into the same commit if we have
+
+9
+00:00:35,710 --> 00:00:39,049
+forgotten to add any file
+in a particular commit.
+
+10
+00:00:40,329 --> 00:00:44,880
+Then we also talked about git diff
+command, that with git diff command,
+
+11
+00:00:44,880 --> 00:00:48,030
+we can compare our
+changes with the latest commit,
+
+12
+00:00:48,030 --> 00:00:51,530
+but also we can use
+the git diff command to
+
+13
+00:00:51,530 --> 00:00:53,979
+compare our current
+changes with any commit.
+
+14
+00:00:54,700 --> 00:00:58,159
+Coming to the exercise,
+I want you to practice
+
+15
+00:00:58,159 --> 00:01:01,240
+making commit and not
+just making a commit,
+
+16
+00:01:01,240 --> 00:01:05,079
+but also trying to write commit
+messages using conventional commits.
+
+17
+00:01:05,540 --> 00:01:08,230
+So practice with conventional commits,
+
+18
+00:01:08,230 --> 00:01:11,450
+practice different types
+of conventional commits.
+
+19
+00:01:12,840 --> 00:01:18,670
+Second thing I want you to try is amend a
+commit using conventional commit message.
+
+20
+00:01:19,569 --> 00:01:20,769
+Change the commit message.
+
+21
+00:01:21,390 --> 00:01:26,060
+And third, I want you to create a new
+file and add it to the same commit.

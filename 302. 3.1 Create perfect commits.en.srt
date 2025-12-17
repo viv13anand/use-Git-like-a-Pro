@@ -1,0 +1,238 @@
+1
+00:00:06,710 --> 00:00:08,470
+Let's dive deeper into commits.
+
+2
+00:00:08,990 --> 00:00:10,109
+So what is a commit?
+
+3
+00:00:10,689 --> 00:00:13,970
+Commit is basically the
+snapshot of the project taken by Git.
+
+4
+00:00:14,580 --> 00:00:19,140
+So whenever you're working on a project,
+you are making any changes to the files,
+
+5
+00:00:19,140 --> 00:00:24,109
+you will add them to the staging
+area. And when you say Git commit,
+
+6
+00:00:24,109 --> 00:00:28,239
+what Git does is that it
+will take snapshot of the exact
+
+7
+00:00:28,239 --> 00:00:32,030
+state of the project and put
+it to your local repository.
+
+8
+00:00:33,439 --> 00:00:36,579
+Snapshots are always
+committed to your local repository.
+
+9
+00:00:37,140 --> 00:00:41,189
+If you want your commits to be
+pushed to the remote repository,
+
+10
+00:00:41,189 --> 00:00:43,890
+then you have to use git push command.
+
+11
+00:00:45,640 --> 00:00:48,259
+Now, how can we create perfect commits?
+
+12
+00:00:49,009 --> 00:00:50,590
+Or I would say better commits.
+
+13
+00:00:51,369 --> 00:00:54,350
+So rule number one is
+creating granular commits.
+
+14
+00:00:55,250 --> 00:00:58,020
+Let's say you were working
+on a bunch of files. Now,
+
+15
+00:00:58,020 --> 00:01:01,689
+one way is that you add
+everything inside a single commit,
+
+16
+00:01:01,689 --> 00:01:04,680
+but that is not good because in case there
+
+17
+00:01:04,680 --> 00:01:08,010
+is any bug or you need
+to make any changes,
+
+18
+00:01:08,010 --> 00:01:10,680
+you will have to revert all the changes.
+
+19
+00:01:11,579 --> 00:01:15,400
+So instead, what you can do is
+that you can create smaller commits.
+
+20
+00:01:16,920 --> 00:01:19,319
+Smaller commits has a bunch of benefits.
+
+21
+00:01:19,829 --> 00:01:22,890
+For example, it's easier
+to review the changes.
+
+22
+00:01:23,969 --> 00:01:28,519
+Also, if there is any mistake
+or any bug in one of the commit,
+
+23
+00:01:28,519 --> 00:01:33,079
+it's easy to roll back that commit
+without changing the rest of the commits.
+
+24
+00:01:34,019 --> 00:01:40,060
+So creating granular commits is better
+than creating a single large commit.
+
+25
+00:01:40,719 --> 00:01:43,439
+Now, when I say creating granular commits,
+
+26
+00:01:43,439 --> 00:01:48,090
+I don't mean that you create a
+single commit for each file,
+
+27
+00:01:48,090 --> 00:01:53,140
+but let's say you are working on
+a big feature like user login.
+
+28
+00:01:54,019 --> 00:01:58,299
+And now user login has a login
+screen. It has authentication.
+
+29
+00:01:58,780 --> 00:02:00,939
+It has some backend API integrations.
+
+30
+00:02:01,599 --> 00:02:06,060
+So instead of doing all
+the work in a single commit,
+
+31
+00:02:06,060 --> 00:02:12,139
+what you can do is that you can break
+down the functionality into multiple commits,
+
+32
+00:02:12,139 --> 00:02:17,819
+like you can have UI changes in one
+commit, testing changes in another commit,
+
+33
+00:02:17,819 --> 00:02:21,060
+and then backend
+integrations in a separate commit.
+
+34
+00:02:24,949 --> 00:02:28,870
+You can leverage the staging area
+for creating those smaller commits.
+
+35
+00:02:29,370 --> 00:02:32,740
+So basically, if you
+have made all the changes,
+
+36
+00:02:32,740 --> 00:02:36,490
+but you want to break it
+down into three commits,
+
+37
+00:02:36,490 --> 00:02:42,479
+so you can start by adding the commits
+into the staging area for only that commit.
+
+38
+00:02:43,000 --> 00:02:47,090
+So you can push only your
+stage changes into one commit,
+
+39
+00:02:47,090 --> 00:02:52,659
+and then add more to your staging
+area and add it to the second commit.
+
+40
+00:02:54,099 --> 00:02:56,960
+Another important thing
+in creating good commits
+
+41
+00:02:56,960 --> 00:02:59,400
+is writing a valuable commit message.
+
+42
+00:02:59,819 --> 00:03:02,900
+So commit message is
+really important because this
+
+43
+00:03:02,900 --> 00:03:06,349
+gives you basically idea
+about what the commit is.
+
+44
+00:03:06,949 --> 00:03:10,229
+And if your teammates are
+also reviewing the commits,
+
+45
+00:03:10,229 --> 00:03:14,240
+it's easier for them to
+understand what this commit is about.
+
+46
+00:03:15,259 --> 00:03:18,780
+So the good commit
+message should have a brief and
+
+47
+00:03:18,780 --> 00:03:21,240
+concise subject line that
+summarizes the changes.
+
+48
+00:03:22,219 --> 00:03:27,270
+It can have a descriptive message body
+that explain most of the important facts.
+
+49
+00:03:28,289 --> 00:03:32,330
+And what you can also do is
+leverage conventional commits.
+
+50
+00:03:32,990 --> 00:03:36,590
+I will talk more about
+conventional commits in the later sections.

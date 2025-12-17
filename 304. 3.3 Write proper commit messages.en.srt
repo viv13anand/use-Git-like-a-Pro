@@ -1,0 +1,493 @@
+1
+00:00:06,650 --> 00:00:10,800
+So we already talked about
+conventional commits. Let's see what they are.
+
+2
+00:00:11,279 --> 00:00:14,289
+Conventional commits
+specification provides an easy
+
+3
+00:00:14,289 --> 00:00:18,320
+set of rules for writing
+commit messages properly.
+
+4
+00:00:19,059 --> 00:00:22,710
+So what it says is that if you
+have to write a commit message,
+
+5
+00:00:22,710 --> 00:00:25,579
+you will define what is the
+type of the commit message.
+
+6
+00:00:26,050 --> 00:00:29,929
+Then you will define the
+scope and description.
+
+7
+00:00:31,109 --> 00:00:34,609
+You also can define
+optional body and footer.
+
+8
+00:00:36,369 --> 00:00:41,850
+So if you're using conventional
+commit, the type is the type of commit.
+
+9
+00:00:42,310 --> 00:00:47,179
+So there are four or five types
+which you can use. Like, for example,
+
+10
+00:00:47,179 --> 00:00:49,570
+for a bug fix, it can be a fix.
+
+11
+00:00:50,310 --> 00:00:53,270
+For a feature, the type can be feet.
+
+12
+00:00:54,270 --> 00:00:56,460
+There are other types, like core,
+
+13
+00:00:56,460 --> 00:01:00,469
+if you are updating any
+library or there is some cleanup.
+
+14
+00:01:01,270 --> 00:01:04,489
+Then you have refactor, if
+there are any refactors.
+
+15
+00:01:05,129 --> 00:01:07,530
+For the test, you can mention it as test.
+
+16
+00:01:08,109 --> 00:01:12,640
+For the CSS or any other style
+changes, you can mention it as styles.
+
+17
+00:01:13,219 --> 00:01:15,980
+For the documents, you can specify docs.
+
+18
+00:01:16,500 --> 00:01:21,159
+So this clearly tells that what
+is the type of commit message.
+
+19
+00:01:22,379 --> 00:01:26,750
+In order to highlight some commits
+that there can be some commits which
+
+20
+00:01:26,750 --> 00:01:30,780
+are really important or which
+you want to pay more attention to.
+
+21
+00:01:31,140 --> 00:01:33,560
+So you can use exclamation sign,
+
+22
+00:01:33,560 --> 00:01:38,790
+which tells that this is a breaking
+change and it needs more attention.
+
+23
+00:01:39,510 --> 00:01:41,629
+So these are just some
+types which you can use.
+
+24
+00:01:42,390 --> 00:01:48,290
+Fix, colon, resolve issue with user
+registration, then feature, feat, colon,
+
+25
+00:01:48,290 --> 00:01:53,219
+add user authentication feature.
+For refactor, you have refactor,
+
+26
+00:01:53,219 --> 00:01:57,519
+extract validation, for core,
+core, clean up unused dependencies.
+
+27
+00:01:58,019 --> 00:02:01,680
+So these are some of the
+examples how your commit messages
+
+28
+00:02:01,680 --> 00:02:04,340
+will look if you are
+using conventional commits.
+
+29
+00:02:05,689 --> 00:02:09,830
+Next we also talked about was scope.
+What is a scope in conventional commit?
+
+30
+00:02:10,650 --> 00:02:16,229
+So you basically define a
+scope in your parenthesis.
+
+31
+00:02:16,710 --> 00:02:20,370
+So this tells that what
+this feature is about.
+
+32
+00:02:21,210 --> 00:02:24,870
+For example, in this
+case, it's like language,
+
+33
+00:02:24,870 --> 00:02:28,990
+and I've specified this
+feature is related to language.
+
+34
+00:02:29,490 --> 00:02:31,050
+So it says add Polish language.
+
+35
+00:02:31,969 --> 00:02:37,360
+But let's say you are working on,
+again, like authentication or user login.
+
+36
+00:02:38,000 --> 00:02:42,009
+So your feature can be
+related to user login.
+
+37
+00:02:43,210 --> 00:02:47,889
+So in that case, all the commits
+which are related to user login,
+
+38
+00:02:47,889 --> 00:02:50,060
+you can specify feed user login.
+
+39
+00:02:50,979 --> 00:02:56,099
+Often what we also do is that we, in
+the scope, we specify the epic name.
+
+40
+00:02:56,719 --> 00:03:01,789
+So if you're working with Jira, you are
+familiar with epics, then in the epic,
+
+41
+00:03:01,789 --> 00:03:07,349
+we usually specify the epic. Like,
+for example, if this is related to...
+
+42
+00:03:08,849 --> 00:03:13,680
+Reporting. So I would add like
+feature reporting and the message.
+
+43
+00:03:14,159 --> 00:03:19,000
+So this gives a very good idea
+about what this feature is about.
+
+44
+00:03:19,419 --> 00:03:23,509
+And if you are looking for a particular
+commit, it's easy to find in the history.
+
+45
+00:03:26,240 --> 00:03:27,539
+For drawing the attention,
+
+46
+00:03:27,539 --> 00:03:32,500
+how you would use exclamation sign is
+along with the type. So like feature,
+
+47
+00:03:32,500 --> 00:03:35,400
+exclamation, and then you
+provide your commit message.
+
+48
+00:03:35,840 --> 00:03:39,590
+You can also specify with
+breaking change text and colon
+
+49
+00:03:39,590 --> 00:03:43,340
+and add what is the
+breaking change in this commit.
+
+50
+00:03:43,900 --> 00:03:46,729
+So basically you specify that
+this is an important commit,
+
+51
+00:03:46,729 --> 00:03:49,840
+but why this is important
+because this has this breaking change.
+
+52
+00:03:54,110 --> 00:03:57,030
+There are also commit
+messages with body and footer,
+
+53
+00:03:57,030 --> 00:04:01,590
+and you will see it a lot many
+times in the design system repos.
+
+54
+00:04:02,169 --> 00:04:07,919
+So in design systems, they usually
+add a lot of, in a single commit,
+
+55
+00:04:07,919 --> 00:04:12,439
+they add a lot of body,
+what are the changes in
+
+56
+00:04:12,439 --> 00:04:15,310
+that particular commit,
+and also the footers.
+
+57
+00:04:15,889 --> 00:04:17,240
+So how this looks is that you...
+
+58
+00:04:18,069 --> 00:04:23,519
+Add a proper description, but then you
+add more what are the changes. For example,
+
+59
+00:04:23,519 --> 00:04:26,180
+if you are building a model component,
+
+60
+00:04:26,180 --> 00:04:29,990
+then you would add like
+what all changes it has
+
+61
+00:04:29,990 --> 00:04:32,649
+related to model,
+dialogues, all those things.
+
+62
+00:04:33,189 --> 00:04:37,709
+And then in the footer, you can
+specify like co-authored by this person,
+
+63
+00:04:37,709 --> 00:04:42,240
+this closes this, this resolve this
+issue number, so you can specify that.
+
+64
+00:04:42,939 --> 00:04:46,250
+One thing to note here
+is that when you are
+
+65
+00:04:46,250 --> 00:04:48,240
+drafting commit
+messages, use present tense.
+
+66
+00:04:49,420 --> 00:04:53,899
+For example, if you are
+implementing user authentication,
+
+67
+00:04:53,899 --> 00:04:58,949
+your conventional commit
+message should be like implement user
+
+68
+00:04:58,949 --> 00:05:02,310
+authentication and not
+implemented user authentication.
+
+69
+00:05:03,250 --> 00:05:05,839
+I've also specified a link
+of conventional commits,
+
+70
+00:05:05,839 --> 00:05:10,569
+so there are more rules
+which you can Look into,
+
+71
+00:05:10,569 --> 00:05:15,560
+there are extended more things you
+can do with it. It's a really nice way.
+
+72
+00:05:15,980 --> 00:05:19,459
+And if you are not using
+it in your company project,
+
+73
+00:05:19,459 --> 00:05:23,579
+it's a very good way to
+introduce it as it helps a lot.
+
+74
+00:05:25,500 --> 00:05:26,759
+Then you are reviewing the comments.
+
+75
+00:05:28,379 --> 00:05:31,269
+Let's go back to our
+Git video course repo.
+
+76
+00:05:32,250 --> 00:05:35,769
+Here, let's create a new
+file. Let's say login.js.
+
+77
+00:05:40,509 --> 00:05:50,120
+So I will just create a
+function, console.log.
+
+78
+00:05:55,220 --> 00:05:57,620
+Let's say I also create a login.html.
+
+79
+00:06:04,470 --> 00:06:06,129
+Let's say login screen.
+
+80
+00:06:06,649 --> 00:06:11,160
+So now I want to, so these two
+files are related to my login feature.
+
+81
+00:06:11,740 --> 00:06:16,560
+So when I commit, I can do is git add all,
+
+82
+00:06:16,560 --> 00:06:23,569
+but I will also do is git commit
+minus m, and how I will specify this,
+
+83
+00:06:23,569 --> 00:06:30,579
+because this is a feature, so I will
+do feed, and I will add the scope,
+
+84
+00:06:30,579 --> 00:06:33,649
+which is this feature, this is login,
+
+85
+00:06:36,040 --> 00:06:45,269
+And then I will specify
+or implement user login.
+
+86
+00:06:46,470 --> 00:06:48,670
+Implement user login.
+
+87
+00:06:50,310 --> 00:06:56,949
+Sometimes what we also do is that we
+specify the task ID or the Jira ID, like T123.
+
+88
+00:07:00,139 --> 00:07:02,240
+So this is also really helpful.
+
+89
+00:07:02,620 --> 00:07:06,120
+If you want to go back to the
+task and see what the task is,
+
+90
+00:07:06,120 --> 00:07:07,519
+you specify in your commit message.
+
+91
+00:07:08,209 --> 00:07:11,889
+So now you can commit it
+with the proper commit message.
+
+92
+00:07:13,009 --> 00:07:18,129
+In case there was a bug, I wanted to
+fix it. So let's say I fix the bug.
+
+93
+00:07:19,589 --> 00:07:24,470
+Now if I make any change,
+and I want to make a commit,
+
+94
+00:07:24,470 --> 00:07:28,980
+I will do git commit minus
+m, and instead of now feed,
+
+95
+00:07:28,980 --> 00:07:33,110
+because this is a bug
+fix, so I will do fix.
+
+96
+00:07:33,629 --> 00:07:36,910
+I will also provide the
+scope, what this fix is about.
+
+97
+00:07:37,470 --> 00:07:43,579
+Sorry, which feature this fix is
+for. So it's for the login feature,
+
+98
+00:07:43,579 --> 00:07:47,420
+and here I will add fix user login.
+
+99
+00:07:50,959 --> 00:07:56,180
+There are also conventions
+about the casing. In some projects,
+
+100
+00:07:56,180 --> 00:08:02,490
+I have seen that using always small
+case, but there's no hard and fast rule.
+
+101
+00:08:02,509 --> 00:08:09,269
+You can check more in the conventional
+commits, and here you specify the ID.
+
+102
+00:08:13,920 --> 00:08:16,269
+So this was everything
+about conventional commits,
+
+103
+00:08:16,269 --> 00:08:18,300
+how to write proper commit messages.

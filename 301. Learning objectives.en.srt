@@ -1,0 +1,33 @@
+1
+00:00:06,620 --> 00:00:08,679
+Welcome to Lesson 3, Discovering Commits.
+
+2
+00:00:09,500 --> 00:00:11,970
+In this lesson, we dive
+deeper into the commits.
+
+3
+00:00:12,550 --> 00:00:16,089
+We start off by looking into
+how to create perfect commits.
+
+4
+00:00:16,789 --> 00:00:20,730
+You will learn how to
+amend commits and write clear
+
+5
+00:00:20,730 --> 00:00:23,100
+commit messages using
+conventional commit format.
+
+6
+00:00:23,859 --> 00:00:28,399
+You will also learn to use the git diff
+command to review changes effectively.
+
+7
+00:00:29,260 --> 00:00:32,109
+Well, that's the plan for
+this lesson. Let's get started.
